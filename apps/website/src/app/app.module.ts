@@ -29,6 +29,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 import { DataModule } from '@teemofeev/data';
+import { LazyLoadImageModule, scrollPreset } from 'ng-lazyload-image'; // <-- include scrollPreset
 
 registerLocaleData(en);
 
@@ -49,6 +50,7 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    LazyLoadImageModule.forRoot({}),
     NzResultModule,
     NzButtonModule,
     NzGridModule,

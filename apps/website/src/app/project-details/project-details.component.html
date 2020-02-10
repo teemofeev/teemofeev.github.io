@@ -7,7 +7,8 @@
       </h4>
       <div
         class="project-wrapper"
-        [ngStyle]="{ backgroundImage: 'url(' + project?.image + ')' }"
+        defaultImage="assets/img-placeholder.png"
+        [lazyLoad]="project.image"
       >
         <div
           *ngIf="project"
@@ -25,7 +26,7 @@
             </h1>
           </div>
           <div nz-col nzSpan="24" [nzMd]="12">
-            <img *ngIf="project?.icon" [src]="project?.icon" />
+            <img *ngIf="project?.icon"   defaultImage="assets/img-placeholder.png" [lazyLoad]="project?.icon" />
           </div>
           <div nz-col nzSpan="24" nzOrder="3">
             <p class="project-description">

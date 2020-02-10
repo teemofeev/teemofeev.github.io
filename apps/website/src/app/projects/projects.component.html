@@ -13,10 +13,16 @@
     >
       <div
         class="project-content"
-        [ngStyle]="{ backgroundImage: 'url(' + project.image + ')' }"
+        defaultImage="assets/img-placeholder.png"
+        [lazyLoad]="project.image"
+
       >
         <h3 class="project-title">{{ project.title }}</h3>
-        <img *ngIf="project.icon" [src]="project.icon" />
+        <img
+          *ngIf="project.icon"
+          defaultImage="assets/img-placeholder.png"
+          [lazyLoad]="project.icon"
+        />
         <p class="project-extra">{{ project.role }}</p>
       </div>
     </a>
