@@ -1,0 +1,116 @@
+@import (reference) 'theme';
+@import (reference) 'mixins';
+
+:host {
+  section {
+    max-width: 1200px;
+    margin: auto;
+
+    @media (max-width: @screen-xl) {
+      padding: @padding-lg;
+    }
+    @media (max-width: @screen-sm) {
+      padding: @padding-sm;
+    }
+  }
+
+  // .stack {
+  //   display: inline-block;
+  //   padding: @padding-xs;
+  //   margin-bottom: @padding-xs;
+  //   margin-right: @padding-xs;
+  //   vertical-align: top;
+  //   border-radius: @border-radius-base;
+  //   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  //   transition: transform .3s ease-in-out;
+  //   &:hover {
+  //     transform: scale(2);
+  //   }
+  //   > *, nz-tag {
+  //     margin: auto;
+  //     margin-bottom: 2px;
+  //     text-align: center;
+  //     font-size: 9px;
+  //     font-weight: bold;
+  //     padding: 0 @padding-xs;
+  //     display: table;
+  //     width: 100%;
+  //   }
+
+  //   .stack-title {
+  //   }
+  // }
+
+  .small-tags {
+    color: @text-color-secondary;
+    &, nz-tag {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+  }
+
+  .secondary-tags {
+    font-size: @font-size-xs;
+    a {
+      color: @text-color;
+      &:hover {
+        color: @icon-color-hover;
+      }
+    }
+    > * {
+      color: @text-color-secondary;
+      margin-right: @padding-xs;
+      margin-bottom: @padding-xs;
+      i {
+        margin-right: 1px;
+      }
+
+    }
+  }
+  .project-wrapper {
+    padding-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 5vw;
+    @media (max-width: @screen-sm) {
+      padding-left: @padding-sm;
+      padding-right: @padding-sm;
+    }
+    @media (max-width: @screen-xs) {
+      padding-left: @padding-xs;
+      padding-right: @padding-xs;
+    }
+    // padding-bottom: 10vh;
+    border-radius: @border-radius-base * 4;
+    background-size: cover;
+
+    .project-content {
+      .slide-in-elliptic-top-fwd();
+      width: 100%;
+      background: @white;
+      border-top-left-radius: @border-radius-base * 4;
+      border-top-right-radius: @border-radius-base * 4;
+      padding: @padding-lg * 2;
+      .project-title {
+        // margin: 2em;
+        font-size: 2em;
+        font-weight: bolder;
+        .project-role {
+          display: block;
+          &,
+          nz-tag {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .project-description {
+      }
+      img {
+        display: block;
+        position: relative;
+        width: 70%;
+        margin: auto;
+        margin-top: -10vh;
+      }
+    }
+  }
+}

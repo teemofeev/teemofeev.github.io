@@ -1,0 +1,33 @@
+<!-- <div class="spot"></div> -->
+<div nz-row>
+  <div nz-col nzSpan="18">
+    <a [routerLink]="['/']">
+      <h1><b>teemofeev.</b></h1>
+    </a>
+  </div>
+  <div nz-col nzSpan="6">
+    <a class="menuButton" (click)="openNavigation()">
+      <i nz-icon nzType="teemofeev:menu" [class.rotated]="navigationVisible"></i>
+    </a>
+  </div>
+</div>
+
+<nz-drawer
+  nzClosable
+  [nzVisible]="navigationVisible"
+  nzPlacement="right"
+  (nzOnClose)="closeNavigation()"
+  [nzBodyStyle]="{ padding: 0, paddingTop: '40px' }"
+>
+  <ul nz-menu nzMode="inline" class="global-menu">
+    <li nz-menu-item [nzSelected]="isRoot" (click)="closeNavigation()">
+      <a [routerLink]="['/']"><i nz-icon nzType="home"></i>Home</a>
+    </li>
+    <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+      <a [routerLink]="['/', 'projects']"><i nz-icon nzType="project"></i>Projects</a>
+    </li>
+    <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+      <a [routerLink]="['/', 'elzse']"><i nz-icon nzType="home"></i>Other</a>
+    </li>
+  </ul>
+</nz-drawer>

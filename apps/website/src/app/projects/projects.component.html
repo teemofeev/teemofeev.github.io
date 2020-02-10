@@ -1,0 +1,24 @@
+<section>
+  <!-- <h4 class="nav-sub-title">/ projects i ps i</h4> -->
+  <h4 style="text-align: center; margin-bottom: 2em">My projects</h4>
+
+  <div nz-row nzGutter="20" class="projects-list">
+    <a
+      [routerLink]="[project.slug]"
+      nz-col
+      nzXs="24"
+      nzSm="8"
+      *ngFor="let project of projects"
+      class="project-item"
+    >
+      <div
+        class="project-content"
+        [ngStyle]="{ backgroundImage: 'url(' + project.image + ')' }"
+      >
+        <h3 class="project-title">{{ project.title }}</h3>
+        <img *ngIf="project.icon" [src]="project.icon" />
+        <p class="project-extra">{{ project.role }}</p>
+      </div>
+    </a>
+  </div>
+</section>

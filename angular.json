@@ -5,7 +5,7 @@
       "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
-          "style": "scss"
+          "style": "less"
         }
       },
       "root": "apps/website",
@@ -30,10 +30,10 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "apps/website/src/theme.less",
-              "apps/website/src/styles.scss"
-            ],
+            "styles": ["apps/website/src/styles/index.less"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/website/src/styles", "node_modules"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -91,10 +91,7 @@
               "apps/website/tsconfig.app.json",
               "apps/website/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/website/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/website/**"]
           }
         },
         "test": {
@@ -128,14 +125,40 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/website-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/website-e2e/**"
-            ]
+            "tsConfig": ["apps/website-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/website-e2e/**"]
           }
+        }
+      }
+    },
+    "data": {
+      "projectType": "library",
+      "root": "libs/data",
+      "sourceRoot": "libs/data/src",
+      "prefix": "teemofeev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/data/tsconfig.lib.json",
+              "libs/data/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/data/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data/jest.config.js",
+            "tsConfig": "libs/data/tsconfig.spec.json",
+            "setupFile": "libs/data/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "less"
         }
       }
     }

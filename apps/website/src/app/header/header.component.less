@@ -1,0 +1,60 @@
+@import (reference) 'theme.less';
+@import (reference) 'mixins.less';
+
+:host {
+  padding: @padding-lg 0;
+
+  @media (max-width: @screen-xl) {
+    padding: @padding-lg;
+  }
+
+  padding-bottom: 0;
+  max-width: 1200px;
+  margin: auto;
+  display: block;
+
+  .spot {
+    @spot-size-w: 30vw;
+    @spot-size-h: 30vh;
+    .background-linear-gradient-calm();
+    .border-radius-f();
+    z-index: -1;
+    opacity: 0.2;
+    position: absolute;
+    top: -@spot-size-h / 5;
+    left: -@spot-size-w / 5;
+    width: @spot-size-w;
+    height: @spot-size-h;
+  }
+
+  a h1 {
+    @media (max-width: 370px) {
+      font-size: 1.9em;
+    }
+    @media (min-width: 370px) {
+      font-size: 2.1em;
+    }
+  }
+
+  .menuButton {
+    float: right;
+    font-size: @heading-1-size;
+    color: @normal-color;
+    i {
+      vertical-align: text-top;
+      transition: transform @animation-duration-slow + 0.1s @ease-base-out;
+      &.rotated {
+        transform: rotate(90deg);
+      }
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+[nz-menu] {
+  [nz-menu-item] {
+    font-size: 20px;
+  }
+}

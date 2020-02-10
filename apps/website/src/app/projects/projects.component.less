@@ -1,0 +1,67 @@
+@import (reference) 'theme';
+@import (reference) 'mixins';
+
+@import (reference) './backgrounds';
+
+:host {
+  section {
+    max-width: 1200px;
+    margin: auto;
+
+    @media (min-width: @screen-xl) {
+      // margin-top: 10vh;
+    }
+    @media (max-width: @screen-xl) {
+      padding: @padding-lg;
+    }
+  }
+
+  .projects-list {
+    @media (max-width: @screen-xl) {
+      padding: @padding-lg;
+    }
+    .slide-in-elliptic-top-fwd();
+    // max-width: 1000px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 5%;
+  }
+
+  .project-item {
+    margin-bottom: @padding-lg * 2;
+    .project-content {
+      min-height: 200px;
+      position: relative;
+      border-radius: @border-radius-base * 4;
+      background-size: cover;
+      padding: @padding-lg - 10px; // - gutter/2
+      color: @white;
+      transition: box-shadow 0.4s, transform 0.4s;
+      // box-shadow: none;
+      // transform: translateY(0);
+      &:hover {
+        // box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+        //   0 8px 16px -8px rgba(0, 0, 0, 0.3),
+        //   0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+        transform: translateY(-3px);
+      }
+      .project-title {
+        color: @white;
+        font-weight: bold;
+      }
+      .project-extra {
+        position: absolute;
+        bottom: 0;
+        font-size: @font-size-xs;
+        font-weight: bold;
+      }
+      img {
+        display: block;
+        position: absolute;
+        width: 50%;
+        top: -20%;
+        right: 5%;
+      }
+    }
+  }
+}

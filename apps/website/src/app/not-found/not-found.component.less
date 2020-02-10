@@ -1,0 +1,28 @@
+@import (reference) 'theme';
+@import (reference) 'mixins';
+
+:host {
+  display: block;
+  .border-radius-f();
+  .background-linear-gradient-fire();
+  .border-radius-animation-fast();
+  @media (max-width: @screen-sm) {
+    border-radius: @border-radius-base * 2;
+  }
+
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+  nz-result {
+    text-align: center;
+    ::ng-deep * {
+      color: @white;
+      // font-weight: bold;
+    }
+
+    nz-tag {
+      font-size: inherit;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+
+@Component({
+  selector: 'teemofeev-not-found',
+  templateUrl: './not-found.component.html',
+  styleUrls: ['./not-found.component.less']
+})
+export class NotFoundComponent implements OnInit {
+
+  @Input() title?: string | TemplateRef<any> = 'Sorry, the page you visited does not exist.';
+  @Input() extra?: string | TemplateRef<any>;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

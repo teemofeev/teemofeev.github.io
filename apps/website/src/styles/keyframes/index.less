@@ -1,0 +1,40 @@
+@import (once) './slide-in.less';
+@import (once) './scale-in.less';
+@import (once) './border-radius.less';
+
+@import (reference) 'theme';
+
+.slide-in-elliptic-top-fwd {
+  -webkit-animation: slide-in-elliptic-top-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+}
+
+.scale-in-center {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.border-radius-animation {
+  @media (min-width: @screen-xs) {
+    -webkit-animation: border-radius-animation 12s ease-in-out alternate
+      infinite;
+    animation: border-radius-animation 12s ease-in-out alternate infinite;
+  }
+}
+
+.border-radius-animation-fast {
+  .border-radius-animation();
+  animation-duration: 5s;
+}
+
+.jello-horizontal() {
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+.ant-drawer.ant-drawer-right.ant-drawer-open {
+  .jello-horizontal();
+}

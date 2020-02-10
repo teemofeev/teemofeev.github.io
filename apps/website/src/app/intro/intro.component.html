@@ -1,0 +1,45 @@
+<section>
+  <div
+    nz-row
+    [nzGutter]="{ xs: 0, xl: 30 }"
+    nzType="flex"
+    nzAlign="middle"
+    nzJustify="center"
+  >
+    <div
+      nz-col
+      nzSpan="24"
+      nzOrder="1"
+      [nzXl]="{ span: 12, order: 0 }"
+      class="description"
+    >
+      <h2>Hi.</h2>
+      <h2>I'm a Software engineer</h2>
+      <h4>
+        and part of the
+        <a target="_blank" href="https://brainhub.co">
+          <nz-tag nzColor="#60a9a6">
+            <i nz-icon nzType="teemofeev:brainhub"></i>BrainHub
+          </nz-tag>
+        </a>
+        core team.
+      </h4>
+      <p>
+        I solve
+        <a routerLink="/projects"
+          ><nz-tag nzColor="#fda085">problems</nz-tag></a
+        >
+        using
+        <a routerLink="/stack"><nz-tag nzColor="#764ba2">software</nz-tag></a>
+      </p>
+      <p>
+        <teemofeev-social-links></teemofeev-social-links>
+      </p>
+    </div>
+    <div nz-col nzSpan="24" nzOrder="0" [nzXl]="{ span: 12, order: 1 }">
+      <div class="holder">
+        <teemofeev-work-table></teemofeev-work-table>
+      </div>
+    </div>
+  </div>
+</section>
