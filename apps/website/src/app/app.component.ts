@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NzIconService } from 'ng-zorro-antd';
 
 
-import * as bhLit from '!raw-loader!../assets/brainhub.svg';
-import * as archlinuxLiteral from '!raw-loader!../assets/archlinux.svg';
+import * as bhLit from '!raw-loader!../assets/logos/brainhub.svg';
+import * as archlinuxLiteral from '!raw-loader!../assets/logos/archlinux.svg';
 import * as menuLiteral from '!raw-loader!../assets/menu.svg';
 
 @Component({

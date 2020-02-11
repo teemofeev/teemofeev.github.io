@@ -1,21 +1,45 @@
 <section>
   <!-- <h4 class="nav-sub-title">/ projects i ps i</h4> -->
-  <h4 style="text-align: center; margin-bottom: 2em">My projects</h4>
+  <h4 style="text-align: center; margin-bottom: 2em">
+    Projects I'm involved in
+  </h4>
 
   <div nz-row nzGutter="20" class="projects-list">
-    <a
-      [routerLink]="[project.slug]"
-      nz-col
-      nzXs="24"
-      nzSm="8"
-      *ngFor="let project of projects"
-      class="project-item"
-    >
+    <ng-container *ngFor="let project of projects">
+      <a
+        *ngIf="!project.slug.startsWith('http')"
+        [routerLink]="project.slug"
+        nz-col
+        nzSpan="24"
+        nzSm="12"
+        nzLg="8"
+        class="project-item"
+      >
+        <ng-container
+          *ngTemplateOutlet="projectTemplate; context: { project: project }"
+        ></ng-container>
+      </a>
+      <a
+        *ngIf="project.slug.startsWith('http')"
+        [href]="project.slug"
+        target="_blank"
+        nz-col
+        nzSpan="24"
+        nzSm="12"
+        nzLg="8"
+        class="project-item"
+      >
+        <ng-container
+          *ngTemplateOutlet="projectTemplate; context: { project: project }"
+        ></ng-container>
+      </a>
+    </ng-container>
+
+    <ng-template #projectTemplate let-project="project">
       <div
         class="project-content"
         defaultImage="assets/img-placeholder.png"
         [lazyLoad]="project.image"
-
       >
         <h3 class="project-title">{{ project.title }}</h3>
         <img
@@ -25,6 +49,6 @@
         />
         <p class="project-extra">{{ project.role }}</p>
       </div>
-    </a>
+    </ng-template>
   </div>
 </section>
