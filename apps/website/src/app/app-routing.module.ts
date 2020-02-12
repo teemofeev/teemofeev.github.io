@@ -8,7 +8,7 @@ import { SoftwareStoryComponent } from './software-story/software-story.componen
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: IntroComponent },
-  { path: 'software', component: SoftwareStoryComponent },
+  { path: 'story', component: SoftwareStoryComponent },
   {
     path: 'projects',
     children: [
