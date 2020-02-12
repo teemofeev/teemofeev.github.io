@@ -13,7 +13,8 @@ import {
   NzDrawerModule,
   NzMenuModule,
   NzSpinModule,
-  NzDividerModule
+  NzDividerModule,
+  NzBackTopModule
 } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -63,6 +64,7 @@ registerLocaleData(en);
     NzMenuModule,
     NzSpinModule,
     NzDividerModule,
+    NzBackTopModule,
     DataModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
