@@ -2,9 +2,9 @@
   <!-- <h4 class="nav-sub-title">/ projects i ps i</h4> -->
   <nz-spin nzTip="Loading..." [nzSpinning]="loading">
     <div *ngIf="project; else notfoundtemplate">
-      <h4 style="text-align: center; margin-bottom: 2em">
+      <h2 class="section-title">
         <a routerLink="..">Projects</a> / {{ project?.title }}
-      </h4>
+      </h2>
       <div
         class="project-wrapper"
         defaultImage="assets/img-placeholder.png"

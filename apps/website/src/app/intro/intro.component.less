@@ -2,15 +2,9 @@
 @import (reference) 'mixins';
 
 :host {
-  section {
-    max-width: 1200px;
-    margin: auto;
-
+  .intro-row {
     @media (min-width: @screen-xl) {
       margin-top: 10vh;
-    }
-    @media (max-width: @screen-xl) {
-      padding: @padding-lg;
     }
 
     .holder {
@@ -48,7 +42,6 @@
           margin-right: 0;
         }
       }
-
     }
   }
 }

@@ -4,9 +4,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { IntroComponent } from './intro/intro.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { SoftwareStoryComponent } from './software-story/software-story.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: IntroComponent },
+  { path: 'software', component: SoftwareStoryComponent },
   {
     path: 'projects',
     children: [

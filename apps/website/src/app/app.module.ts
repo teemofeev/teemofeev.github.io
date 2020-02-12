@@ -12,7 +12,8 @@ import {
   NzTagModule,
   NzDrawerModule,
   NzMenuModule,
-  NzSpinModule
+  NzSpinModule,
+  NzDividerModule
 } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +30,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 import { DataModule } from '@teemofeev/data';
-import { LazyLoadImageModule, scrollPreset } from 'ng-lazyload-image'; // <-- include scrollPreset
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { SoftwareStoryComponent } from './software-story/software-story.component';
 
 registerLocaleData(en);
 
@@ -42,7 +44,8 @@ registerLocaleData(en);
     SocialLinksComponent,
     WorkTableComponent,
     ProjectsComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    SoftwareStoryComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ registerLocaleData(en);
     NzDrawerModule,
     NzMenuModule,
     NzSpinModule,
+    NzDividerModule,
     DataModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
