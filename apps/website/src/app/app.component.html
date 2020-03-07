@@ -1,10 +1,17 @@
 <teemofeev-header></teemofeev-header>
-<router-outlet></router-outlet>
 
-<p class="footer">
-  I was made with
-  <i class="heart" nz-icon nzType="heart" nzTheme="fill"></i>
-  in Ukraine
-</p>
+<router-outlet #outlet="outlet"></router-outlet>
 
+<div class="footer">
+  <teemofeev-social-links style="text-align: center"></teemofeev-social-links>
+  <p>
+    I was made with
+    <i class="heart" nz-icon nzType="heart" nzTheme="fill"></i>
+    in Ukraine
+  </p>
+</div>
 <nz-back-top></nz-back-top>
+
+<ng-template #indicatorTemplate>
+  <img #loading src="../assets/loading.gif" alt="Loading gif by https://hellobello.com/" />
+</ng-template>

@@ -16,9 +16,14 @@
     },
     "website-e2e": {
       "tags": [],
-      "implicitDependencies": ["website"]
+      "implicitDependencies": [
+        "website"
+      ]
     },
     "data": {
+      "tags": []
+    },
+    "website-ssr": {
       "tags": []
     }
   }

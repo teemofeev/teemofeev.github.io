@@ -1,5 +1,5 @@
 <div class="links">
-  <a target="_blank" href="mailto:timadevelop@gmail.com">
+  <a target="_blank" [href]="mailHref" (click)="emailClick($event)">
     <nz-tag nzColor="#D44638">
       <i style="margin-right: 0" nz-icon nzType="mail" nzTheme="fill"></i>
     </nz-tag>

@@ -22,9 +22,6 @@ export class DataService {
       stack: [
         { tech: 'Prototyping', color: '#1771F1' },
         { tech: 'R&D', color: '#FE9E76' },
-        { tech: 'Software', color: '#00CF91' },
-        { tech: 'Hardware', color: '#1771F1' },
-        { tech: 'PCBs', color: '#00CF91' }
       ],
       links: [
         { href: 'https://brainhub.co', color: '#1772F1', text: 'Website' },
@@ -34,40 +31,20 @@ export class DataService {
       ]
     },
     {
-      title: 'Tinusaur',
-      slug: 'tinusaur',
-      role: 'Full Stack Engineer',
-      image: 'assets/patterns/radiant.svg',
-      description: `
-      “Tinusaur” is an educational platform aimed at students and teachers, and a set of tools for programming, mathematics, and physics – all open-source.
-      It was started in 2013 and offered the hardware, software, and methodology necessary to learn these sciences in a fun and practical way.
-      The Tinusaur is already used by universities and schools in Bulgaria, Western Europe, and North America.
-      `,
-      icon: 'assets/logos/tinusaur.svg',
-      stack: [
-        { tech: 'Python', color: '#FE9E76' },
-        { tech: 'WebSockets', color: '#00CF91' },
-        { tech: 'Angular', color: '#1771F1' },
-        { tech: 'UI', color: '#00CF91' }
-      ],
-      links: [
-        { href: 'https://tinusaur.com/', color: '#1772F1', text: 'Website' },
-        { href: 'https://www.facebook.com/tinusaur/', color: '#1772F1', text: 'Facebook' },
-        { href: 'https://www.instagram.com/tinusaur/', color: '#1772F1', text: 'Instagram' },
-      ]
-    },
-    {
       title: 'GR',
+      subTitle: '@brainhub',
       slug: 'gr',
       role: 'Software engineer',
       image: 'assets/patterns/gr_back.jpg',
       description: `
-      GR is a gesture tracking palm-bracelet, an universal gesture capturing device with its own open-source platform.
-
-      The main application is a real time translation of sign languages.
+      I and my team are working on a gesture recognition bracelet, a universal gesture capturing device with its open-source platform.
+      We made our PCB, wrote a complete SDK for a real-time sensor data analysis and implemented algorithms for extracting phalanges position using accelerometer, magnetometer, and gyroscope data.
+      Time invested: > 2 years.
       `,
       stack: [
         { tech: 'Gestures', color: '#FE9E76' },
+        { tech: 'C/C++', color: '#FE9E76' },
+        { tech: 'OpenGL', color: '#FE9E76' },
         { tech: 'ML', color: '#1771F1' },
         { tech: 'VR', color: '#00CF91' },
         { tech: 'Research', color: '#00CF91' }
@@ -77,12 +54,63 @@ export class DataService {
       ]
     },
     {
+      title: 'Tinusaur',
+      subTitle: '@brainhub',
+      slug: 'tinusaur',
+      role: 'Full Stack Engineer',
+      image: 'assets/patterns/radiant.svg',
+      description: `
+      “Tinusaur” is an educational platform aimed at students and teachers, and a set of tools for programming, mathematics, and physics – all open-source.
+      It was started in 2013 and offered the hardware, software, and methodology necessary to learn these sciences in a fun and practical way.
+      The Tinusaur is already used by universities and schools in Bulgaria, Western Europe, and North America.
+      We with @tinusaur work on the Blocktinu - a web-based platform for teachers and students who are learning to write low and high-level code for IoT platforms like Arduino or Tinusaur.
+      We believe that kids can code so we implemented both code editor and visual block-based editor for them in our web interface.
+      The V2.0 prototype was written in one month.
+      `,
+      icon: 'assets/logos/tinusaur.svg',
+      stack: [
+        { tech: 'Python', color: '#FE9E76' },
+        { tech: 'Django', color: '#FE9E76' },
+        { tech: 'WebSockets', color: '#00CF91' },
+        { tech: 'Angular', color: '#1771F1' },
+      ],
+      links: [
+        { href: 'https://tinusaur.com/', color: '#1772F1', text: 'Website' },
+        { href: 'https://www.facebook.com/tinusaur/', color: '#1772F1', text: 'Facebook' },
+        { href: 'https://www.instagram.com/tinusaur/', color: '#1772F1', text: 'Instagram' },
+      ]
+    },
+    {
+      title: 'The Knob',
+      subTitle: '@brainhub',
+      slug: 'theknob',
+      role: 'Web developer',
+      image: 'assets/patterns/knob.jpg',
+      description: `
+      A work desk accessory that allows a convenient way to control audio volume, made of concrete and some additive technologies.
+      It supports scrolling mode and fantastic light effects.
+      `,
+      links: [
+        { href: 'https://brainhub.co/projects/theknob', color: '#1772F1', text: 'Website' },
+        { href: 'https://www.instagram.com/theknob_/', color: '#1772F1', text: 'Instagram' },
+      ],
+      stack: [
+        { tech: 'HCI', color: '#00CF91' },
+        { tech: 'Audio', color: '#1771F1' },
+        { tech: 'Concrete', color: '#FE9E76' },
+      ],
+    },
+    {
       title: 'GetMaker',
+      subTitle: '@brainhub',
       slug: 'getmaker',
       role: 'Full Stack Engineer',
       image: 'assets/patterns/boxes.svg',
       description: `
-      A platform for buying and selling services for Bulgaria region.
+      A marketplace for service providers written from scratch using Django, Angular, WebSockets & Redis for built-in messenger.
+      The goal is to make it easier and more effective for people like layers, builders,
+      seamstresses to promote their services online using completely new approach &  modern social channels.
+      Time invested: > 10 months
       `,
       links: [
         { href: 'https://brainhub.co/projects/getmaker', color: '#1772F1', text: 'Website' },
@@ -97,36 +125,21 @@ export class DataService {
       ],
     },
     {
-      title: 'The Knob',
-      slug: 'theknob',
-      role: 'Web developer',
-      image: 'assets/patterns/knob.jpg',
-      description: `
-      A work desk accessory that allows a convenient way to control audio volume, made of concrete and some additive technologies.
-      Supports scrolling mode and fantastic light effects.
-      `,
-      links: [
-        { href: 'https://brainhub.co/projects/theknob', color: '#1772F1', text: 'Website' },
-        { href: 'https://www.instagram.com/theknob_/', color: '#1772F1', text: 'Instagram' },
-      ],
-      stack: [
-        { tech: 'Concrete', color: '#FE9E76' },
-        { tech: 'Audio', color: '#1771F1' },
-        { tech: 'Interaction', color: '#00CF91' },
-        { tech: 'HCI', color: '#00CF91' },
-      ],
-    },
-    {
       title: 'DIANA',
+      subTitle: '@brainhub',
       slug: 'diana',
       role: 'Full Stack Engineer',
       image: 'assets/patterns/liquid.svg',
       description: `
-      Wireless health platform that aims to simplify medical measurements analysis.
-      Contains a wireless IoT sensor set that allows to measure health data and stream it in real-time to the mobile app and web-based platform.
-      Mobile and web applications allow to visualize and analyze real-time measured data.
+      Wireless health platform that aims to simplify medical measurement analysis.
+      Mobile and web applications allow doctors to visualize and analyze real-time measured data from ECG, temperature, glucose, SpO2 and EEG sensors.
+      The main goal is to allow professionals to analyze patients' data remotely.
+      The prototype was written in ~4 months.
       `,
       icon: 'assets/logos/diana_web.jpg',
+      links: [
+        { href: 'https://brainhub.co/projects/diana', color: '#1772f1', text: 'Website' }
+      ],
       stack: [
         { tech: 'React', color: '#FE9E76' },
         { tech: 'Django', color: '#1771F1' },
@@ -136,9 +149,45 @@ export class DataService {
       ],
     },
     {
+      title: 'T5MTOKYFOtFv',
+      subTitle: '@brainhub',
+      slug: 'T5MTOKYFOtFv',
+      role: 'Software engineer',
+      image: 'assets/patterns/triangles.svg',
+      description: `
+      Raspberry Pi information stations for an innovation space.
+      Prototyping time: ~1 month.
+      `,
+      links: [
+      ],
+      stack: [
+        { tech: 'React', color: '#FE9E76' },
+        { tech: 'react-spring', color: '#FE9E76' },
+        { tech: 'Node.js (Nest.js)', color: '#1771F1' },
+        { tech: 'Electron', color: '#1771F1' },
+        { tech: 'Prototyping', color: '#1771F1' },
+      ],
+    },
+    {
+      title: 'Tavle',
+      slug: 'tavle',
+      role: 'Schoolboy',
+      image: 'assets/patterns/stingrays.svg',
+      description: `
+      A platform for sharing ideas, finding jobs and business partners in a tech field.
+      It was written back in 2014, I was 17 y.o., I thought it's gonna be big and I tried to participate in a Microsoft BizSpark Program.
+      I won, but in 2015 I graduated from school and started my university degree.
+      `,
+      stack: [
+        { tech: 'Ideas', color: '#FE9E76' },
+        { tech: 'Social', color: '#1771F1' },
+        { tech: 'Node.js', color: '#1771F1' },
+      ],
+    },
+    {
       title: 'Elixir file content search lib',
       slug: 'fcs',
-      role: 'Developer',
+      role: 'Student',
       image: 'assets/patterns/elixir.svg',
       description: `
       Elixir library for file contents search
@@ -154,10 +203,10 @@ export class DataService {
     {
       title: 'SFML graphics',
       slug: 'sfml',
-      role: 'Software engineer',
+      role: 'Student',
       image: 'assets/patterns/sfml_game.png',
       description: `
-      A simple game written using Simple and Fast Multimedia Library.
+      A simple game, written using Simple and Fast Multimedia Library.
       `,
       links: [
         { href: 'https://github.com/timadevelop/SFMLPractice', color: '#1772F1', text: 'Github' },
@@ -165,25 +214,6 @@ export class DataService {
       stack: [
         { tech: 'Graphics', color: '#FE9E76' },
         { tech: 'Game design', color: '#1771F1' },
-      ],
-    },
-    {
-      title: 'Tavle',
-      slug: 'tavle',
-      role: 'Software engineer',
-      image: 'assets/patterns/stingrays.svg',
-      description: `
-      A platform for sharing ideas, finding jobs and business partners in a tech field.
-      It was written back in 2014, I was 17 y.o., I thought it's gonna be big and I tried to participate in a Microsoft BizSpark Program.
-      I won, but in 2015 I graduated from school and started my university degree.
-      `,
-      links: [
-        { href: 'https://github.com/timadevelop/tavle', color: '#1772F1', text: 'Github' },
-      ],
-      stack: [
-        { tech: 'Ideas', color: '#FE9E76' },
-        { tech: 'Social', color: '#1771F1' },
-        { tech: 'Backend', color: '#1771F1' },
       ],
     },
     {

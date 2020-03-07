@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project, DataService } from '@teemofeev/data';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { MetaService } from '../services/meta.service';
 
 @Component({
   selector: 'teemofeev-project-details',
@@ -13,7 +14,8 @@ export class ProjectDetailsComponent implements OnInit {
 
   constructor(
     private readonly activetedRoute: ActivatedRoute,
-    private readonly dataService: DataService
+    private readonly dataService: DataService,
+    private readonly metaService: MetaService
   ) { }
 
   ngOnInit() {
@@ -23,6 +25,10 @@ export class ProjectDetailsComponent implements OnInit {
   private loadProject = async (paramMap: ParamMap) => {
     const slug = paramMap.get('slug');
     this.project = await this.dataService.getProjectBySlug(slug).toPromise();
+    if (this.project) {
+      this.metaService.setTitle(this.project.title + ' - Projects - teemofeev');
+      this.metaService.setKeywords(this.project.stack.map(v => v.tech));
+    }
     this.loading = false;
   }
 

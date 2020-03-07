@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+import { MetaService } from '../services/meta.service';
 
 @Component({
   selector: 'teemofeev-not-found',
@@ -10,9 +11,12 @@ export class NotFoundComponent implements OnInit {
   @Input() title?: string | TemplateRef<any> = 'Sorry, the page you visited does not exist.';
   @Input() extra?: string | TemplateRef<any>;
 
-  constructor() { }
+  constructor(
+    private readonly metaService: MetaService
+  ) { }
 
   ngOnInit() {
+    this.metaService.setTitle(this.title + ' - teemofeev');
   }
 
 }

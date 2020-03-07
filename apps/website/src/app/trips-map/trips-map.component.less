@@ -1,0 +1,21 @@
+@import (reference) 'theme';
+
+.map {
+  position: relative;
+  .spinner {
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 0;
+  }
+  margin-top: 5%;
+  iframe {
+    border: 1px solid @border-color-base;
+    border-radius: @border-radius-base;
+    min-height: 70vh;
+  }
+}

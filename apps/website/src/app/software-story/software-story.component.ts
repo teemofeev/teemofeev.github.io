@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaService } from '../services/meta.service';
 
 @Component({
   selector: 'teemofeev-software-story',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoftwareStoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly metaService: MetaService
+  ) { }
 
   ngOnInit() {
+    this.metaService.setTitle('My story as a software engineer - teemofeev');
   }
 
 }

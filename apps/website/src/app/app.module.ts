@@ -14,7 +14,9 @@ import {
   NzMenuModule,
   NzSpinModule,
   NzDividerModule,
-  NzBackTopModule
+  NzBackTopModule,
+  NzTypographyModule,
+  NzMessageServiceModule,
 } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,6 +35,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { DataModule } from '@teemofeev/data';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { SoftwareStoryComponent } from './software-story/software-story.component';
+import { TripsMapComponent } from './trips-map/trips-map.component';
 
 registerLocaleData(en);
 
@@ -46,14 +49,15 @@ registerLocaleData(en);
     WorkTableComponent,
     ProjectsComponent,
     ProjectDetailsComponent,
-    SoftwareStoryComponent
+    SoftwareStoryComponent,
+    TripsMapComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     LazyLoadImageModule.forRoot({}),
     NzResultModule,
     NzButtonModule,
@@ -65,6 +69,8 @@ registerLocaleData(en);
     NzSpinModule,
     NzDividerModule,
     NzBackTopModule,
+    NzTypographyModule,
+    NzMessageServiceModule,
     DataModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

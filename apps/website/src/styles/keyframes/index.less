@@ -1,5 +1,6 @@
 @import (once) './slide-in.less';
 @import (once) './scale-in.less';
+@import (once) './fade-in.less';
 @import (once) './border-radius.less';
 
 @import (reference) 'theme';
@@ -11,10 +12,52 @@
     both;
 }
 
-.scale-in-center {
-  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+.scale-in-center(@delay: 0s, @duration: 0.5s) {
+  -webkit-animation: scale-in-center @duration
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) @delay both;
+  animation: scale-in-center @duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    @delay both;
+}
+
+.slide-in-top(@delay: 0s, @duration: 0.5s) {
+  -webkit-animation: slide-in-top @duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    @delay both;
+  animation: slide-in-top @duration cubic-bezier(0.25, 0.46, 0.45, 0.94) @delay
     both;
-  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slide-in-br(@delay: 0s, @duration: 0.5s) {
+  -webkit-animation: slide-in-br @duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    @delay both;
+  animation: slide-in-br @duration cubic-bezier(0.25, 0.46, 0.45, 0.94) @delay
+    both;
+}
+
+.slide-in-bottom(@delay: 0s, @duration: 0.5s) {
+  @fn: cubic-bezier(0.4, 0, 0.29, 0.98);
+  -webkit-animation: slide-in-bottom @duration @fn @delay both;
+  animation: slide-in-bottom @duration @fn @delay both;
+}
+
+
+.slide-in-tr(@delay: 0s, @duration: 0.5s) {
+  -webkit-animation: slide-in-tr @duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    @delay both;
+  animation: slide-in-tr @duration cubic-bezier(0.25, 0.46, 0.45, 0.94) @delay
+    both;
+}
+
+.slide-in-right(@delay: 0s, @duration: 0.5s) {
+  -webkit-animation: slide-in-right @duration
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) @delay both;
+  animation: slide-in-right @duration cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    @delay both;
+}
+
+.fade-in(@delay: 0s, @duration: 0.7s) {
+  -webkit-animation: fade-in @duration cubic-bezier(0.39, 0.575, 0.565, 1)
+    @delay both;
+  animation: fade-in @duration cubic-bezier(0.39, 0.575, 0.565, 1) @delay both;
 }
 
 .border-radius-animation {

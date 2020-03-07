@@ -12,6 +12,7 @@ export class ProjectLink {
 
 export class Project {
   title: string;
+  subTitle?: string;
   role: string;
   slug: string;
   image: string;

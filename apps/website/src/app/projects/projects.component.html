@@ -36,12 +36,11 @@
     </ng-container>
 
     <ng-template #projectTemplate let-project="project">
-      <div
-        class="project-content"
-        defaultImage="assets/img-placeholder.png"
-        [lazyLoad]="project.image"
-      >
-        <h3 class="project-title">{{ project.title }}</h3>
+      <div class="project-content" [lazyLoad]="project.image">
+        <h3 class="project-title">
+          {{ project.title }}
+          <span class="sub-title" *ngIf="project.subTitle">{{ project.subTitle }}</span>
+        </h3>
         <img
           *ngIf="project.icon"
           defaultImage="assets/img-placeholder.png"

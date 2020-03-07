@@ -1,18 +1,24 @@
-<!-- <div class="spot"></div> -->
-<div nz-row>
-  <div nz-col nzSpan="18">
-    <a [routerLink]="['/']">
-      <h1><b>teemofeev.</b></h1>
-    </a>
+<section>
+  <div nz-row>
+    <div nz-col nzSpan="18">
+      <a [routerLink]="['/']">
+        <h1><b>teemofeev.</b></h1>
+      </a>
+    </div>
+    <div nz-col nzSpan="6">
+      <a class="menuButton" (click)="openNavigation()">
+        <i
+          nz-icon
+          nzType="teemofeev:menu"
+          #loadingElement
+          [class.rotated]="navigationVisible"
+        ></i>
+      </a>
+    </div>
   </div>
-  <div nz-col nzSpan="6">
-    <a class="menuButton" (click)="openNavigation()">
-      <i nz-icon nzType="teemofeev:menu" [class.rotated]="navigationVisible"></i>
-    </a>
-  </div>
-</div>
-
+</section>
 <nz-drawer
+  nzWrapClassName="navigation"
   nzClosable
   [nzVisible]="navigationVisible"
   nzPlacement="right"
@@ -24,10 +30,39 @@
       <a [routerLink]="['/']"><i nz-icon nzType="home"></i>Home</a>
     </li>
     <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
-      <a [routerLink]="['/', 'projects']"><i nz-icon nzType="project"></i>Projects</a>
+      <a [routerLink]="['/', 'projects']"
+        ><i nz-icon nzType="project"></i>Projects</a
+      >
     </li>
     <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
-      <a [routerLink]="['/', 'story']"><i nz-icon nzType="home"></i>Story</a>
+      <a [routerLink]="['/', 'story']"><i nz-icon nzType="align-left"></i>Story</a>
+    </li>
+    <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+      <a [routerLink]="['/', 'trips']"><i nz-icon nzType="global"></i>Trips</a>
+    </li>
+    <li nz-menu-group nzTitle="Social">
+      <ul>
+        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+          <a target="_blank" href="https://twitter.com/teemofeev"
+            ><i nz-icon nzType="export"></i>Twitter</a
+          >
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+          <a target="_blank" href="https://facebook.com/teemofeev"
+            ><i nz-icon nzType="export"></i>Facebook</a
+          >
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+          <a target="_blank" href="https://github.com/timadevelop"
+            ><i nz-icon nzType="export"></i>Github</a
+          >
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+          <a target="_blank" href="https://linkedin.com/in/teemofeev"
+            ><i nz-icon nzType="export"></i>Linkedin</a
+          >
+        </li>
+      </ul>
     </li>
   </ul>
 </nz-drawer>

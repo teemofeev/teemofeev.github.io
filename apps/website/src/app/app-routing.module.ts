@@ -5,22 +5,30 @@ import { IntroComponent } from './intro/intro.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { SoftwareStoryComponent } from './software-story/software-story.component';
+import { TripsMapComponent } from './trips-map/trips-map.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: IntroComponent },
+  {
+    path: '',
+    pathMatch: 'full',
+    component: IntroComponent,
+    data: { animation: 'index' }
+  },
   { path: 'story', component: SoftwareStoryComponent },
+  { path: 'trips', component: TripsMapComponent },
   {
     path: 'projects',
     children: [
       {
         path: ':slug',
-        component: ProjectDetailsComponent
+        component: ProjectDetailsComponent,
       },
       {
         path: '',
         component: ProjectsComponent,
+        data: { animation: 'secondary' }
       }
-    ]
+    ],
   },
   { path: '**', component: NotFoundComponent },
 ];
