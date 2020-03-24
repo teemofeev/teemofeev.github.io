@@ -18,6 +18,10 @@ export class SocialLinksComponent {
       return;
     }
     this.mailHref = `mailto:${this._email}`;
-    this.nzMsg.success(this._email, { nzDuration: 3000, nzPauseOnHover: true, nzAnimate: true });
+    this.nzMsg.success(this._email, {
+      nzDuration: 3000,
+      nzPauseOnHover: true,
+      nzAnimate: true
+    });
   }
 }

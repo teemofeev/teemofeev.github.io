@@ -72,7 +72,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => this.isRoot = this.router.isActive('/', true));
+    this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe(e => this.isRoot = this.router.isActive('/', true));
   }
 
 

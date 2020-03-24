@@ -25,8 +25,8 @@ export class ProjectDetailsComponent implements OnInit {
   private loadProject = async (paramMap: ParamMap) => {
     const slug = paramMap.get('slug');
     this.project = await this.dataService.getProjectBySlug(slug).toPromise();
+    this.metaService.setTitle((this.project?.title || 'Not found') + ' - Projects - teemofeev');
     if (this.project) {
-      this.metaService.setTitle(this.project.title + ' - Projects - teemofeev');
       this.metaService.setKeywords(this.project.stack.map(v => v.tech));
     }
     this.loading = false;
