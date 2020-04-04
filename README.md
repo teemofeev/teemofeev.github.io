@@ -1,13 +1,29 @@
-# Teemofeev
+<p align="center">
+  <a href="http://ng.ant.design">
+  <img src="./apps/website/src/assets/favicon.png" width="230">
+  </a>
+</p>
 
-Teemofeev website.
+<h1 align="center">
+<b>teemofeev</b>
+</h1>
 
-## Development server
+
+<div align="center">
+Personal page.
+</div>
+
+![Website screenshot](./apps/website/src/assets/screenshot.png)
+
+
+# Running website
+
+## Using a development server
 
 Run `ng serve my` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 
-## Prerender
+## Using Prerender
 
 1. Generate routes list
    - `ng serve` to serve website
@@ -24,13 +40,15 @@ Run `ng serve my` for a dev server. Navigate to http://localhost:4200/. The app 
    - Navigate to `localhost`, disable JS and check if everything is OK.
 
 
-## SSR
+## Using SSR express server
 
 1. Build & render ssr
    - `yarn run ssr:build:universal` to build ssr website
    - `yarn run ssr:serve:universal` to serve ssr
 
-## Nx notes
+---
+
+# Nx notes
 
 This project was generated using [Nx](https://nx.dev).
 
