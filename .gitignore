@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+/docs/**/*.map
+/docs/**/*~
+
 # dependencies
 /node_modules
 
