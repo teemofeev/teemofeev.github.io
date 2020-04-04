@@ -8,7 +8,7 @@
       >
         <img
           defaultImage="assets/img-placeholder.png"
-          lazyLoad="https://raw.githubusercontent.com/timadevelop/linux_cofiguration/master/result.png"
+          src="https://raw.githubusercontent.com/timadevelop/linux_cofiguration/master/result.png"
         />
         <div class="monitor-link-description">
           <i nz-icon nzType="teemofeev:archlinux"></i>& i3
@@ -25,7 +25,7 @@
       >
         <img
           defaultImage="assets/img-placeholder.png"
-          lazyLoad="assets/keyboard.jpg"
+          src="assets/keyboard.jpg"
         />
         <div class="monitor-link-description">
           <p>Requirements elicitation</p>
@@ -36,7 +36,7 @@
       <a class="monitor-link" routerLink="/story">
         <img
           defaultImage="assets/img-placeholder.png"
-          lazyLoad="https://media.giphy.com/media/l1J9LMNeWISnddECA/giphy.gif"
+          src="https://media.giphy.com/media/l1J9LMNeWISnddECA/giphy.gif"
         />
         <div class="monitor-link-description">
           <p>Self-education</p>
@@ -44,23 +44,12 @@
       </a>
     </div>
     <div nz-col nzSpan="7" class="small monitor">
-      <!-- <iframe
-        width="100%"
-        height="100%"
-          defaultImage="assets/img-placeholder.png" lazyLoad="https://www.youtube.com/embed/lmHh9lQQPjk?controls=0"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe> -->
       <a
         class="monitor-link"
         target="_blank"
         href="https://www.drive2.ru/users/teemofeev/"
       >
-        <img
-          defaultImage="assets/img-placeholder.png"
-          lazyLoad="assets/drift.gif"
-        />
+        <img [src]="'assets/img-placeholder.png' || 'assets/drift.gif'" />
         <div class="monitor-link-description">
           <p>Cars</p>
         </div>

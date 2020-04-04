@@ -1,5 +1,37 @@
 # Teemofeev
 
+Teemofeev website.
+
+## Development server
+
+Run `ng serve my` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+
+## Prerender
+
+1. Generate routes list
+   - `ng serve` to serve website
+   - `yarn run ssr:prerender:list-static-routes` to generate the list of static routes
+
+2. Build & render ssr
+   - `yarn run ssr:build:universal` to build ssr website
+   - `yarn run ssr:prerender:serve-and-render` or (`yarn run ssr:serve:universal` and `yarn run ssr:prerender:render`) to serve ssr and render static files.
+   - now `dist/apps/website/browser/` should contain all static files and pages.
+
+3. Serve static with Docker
+   - `docker build -t teemofeev-website .`
+   - `docker run --name teemofeev-website -p 80:80 -d teemofeev-website:latest`
+   - Navigate to `localhost`, disable JS and check if everything is OK.
+
+
+## SSR
+
+1. Build & render ssr
+   - `yarn run ssr:build:universal` to build ssr website
+   - `yarn run ssr:serve:universal` to serve ssr
+
+## Nx notes
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
@@ -13,6 +45,7 @@ This project was generated using [Nx](https://nx.dev).
 [10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
 
 [Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+
 
 ## Adding capabilities to your workspace
 

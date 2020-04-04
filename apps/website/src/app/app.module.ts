@@ -18,8 +18,9 @@ import {
   NzTypographyModule,
   NzMessageServiceModule,
 } from 'ng-zorro-antd';
+import { MarkdownModule } from 'ngx-markdown';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
@@ -33,9 +34,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 import { DataModule } from '@teemofeev/data';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { SoftwareStoryComponent } from './software-story/software-story.component';
 import { TripsMapComponent } from './trips-map/trips-map.component';
+import { httpInterceptorProviders } from './interceptors';
 
 registerLocaleData(en);
 
@@ -56,9 +57,9 @@ registerLocaleData(en);
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
     FormsModule,
     HttpClientModule,
-    LazyLoadImageModule.forRoot({}),
     NzResultModule,
     NzButtonModule,
     NzGridModule,
@@ -73,7 +74,10 @@ registerLocaleData(en);
     NzMessageServiceModule,
     DataModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [
+    httpInterceptorProviders,
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

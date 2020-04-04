@@ -12,6 +12,7 @@
   }
   display: block;
   position: relative;
+  margin-bottom: 1em;
   section {
     @media (min-width: @section-width-max + @padding-lg) {
       padding-top: @padding-lg;
@@ -32,6 +33,7 @@
   // display: block;
 
   a h1 {
+    margin-bottom: 0;
     @media (max-width: 370px) {
       font-size: 1.9em;
     }
@@ -40,11 +42,41 @@
     }
   }
 
+  .main-menu {
+    float: right;
+    border: none;
+    font-weight: bold;
+
+    .menuButton i {
+      font-size: @heading-1-size;
+      vertical-align: bottom;
+      margin-right: 0;
+    }
+
+    * {
+      vertical-align: middle;
+    }
+
+    [nz-menu-item] {
+      // font-size: @heading-1-size / ;
+      border: none !important;
+      &:last-child {
+        padding-right: 0;
+      }
+      @media (max-width: @screen-md) {
+        display: none;
+        &.always-visible {
+          display: initial;
+        }
+      }
+    }
+  }
+
   .menuButton {
     float: right;
-    font-size: @heading-1-size;
     // color: @text-color-inverse;
     i {
+      font-size: @heading-1-size;
       color: @normal-color;
       vertical-align: text-top;
       transition: transform @animation-duration-slow + 0.1s @ease-base-out;
@@ -63,7 +95,7 @@
 
 }
 
-[nz-menu] {
+[nz-menu].drawer-menu {
   [nz-menu-item] {
     font-size: 20px;
   }

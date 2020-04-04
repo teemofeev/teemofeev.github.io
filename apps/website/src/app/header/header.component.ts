@@ -46,7 +46,6 @@ export class HeaderComponent implements OnInit {
         this.loadingElement.nativeElement,
         'loading',
       );
-      console.log('run');
     })
   }
 

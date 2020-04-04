@@ -7,8 +7,9 @@
       </h2>
       <div
         class="project-wrapper"
-        defaultImage="assets/img-placeholder.png"
-        [lazyLoad]="project.image"
+        [style.background-image]="
+          'url(' + (project?.image || 'assets/img-placeholder.png') + ')'
+        "
       >
         <div
           *ngIf="project"
@@ -26,12 +27,13 @@
             </h1>
           </div>
           <div nz-col nzSpan="24" [nzMd]="12">
-            <img *ngIf="project?.icon"   defaultImage="assets/img-placeholder.png" [lazyLoad]="project?.icon" />
+            <img
+              *ngIf="project?.icon"
+              [src]="project?.icon || 'assets/img-placeholder.png'"
+            />
           </div>
           <div nz-col nzSpan="24" nzOrder="3">
-            <p class="project-description">
-              {{ project?.description || 'No description yet.' }}
-            </p>
+            <markdown class="markdown" [src]="project?.description"></markdown>
           </div>
           <!-- <div nz-col nzSpan="24" nzOrder="4">
             <div class="stack">
@@ -82,16 +84,17 @@
                 [href]="si.href"
                 *ngFor="let si of project.links"
               >
-                  {{ si.text }}
+                {{ si.text }}
               </a>
-              <span *ngIf="project?.stack?.length > 0 && project?.links?.length > 0">
+              <span
+                *ngIf="project?.stack?.length > 0 && project?.links?.length > 0"
+              >
                 |
               </span>
               <span *ngFor="let si of project.stack">
                 <i *ngIf="si.icon" nz-icon [nzType]="si.icon"></i>
                 {{ si.tech }}
               </span>
-
             </p>
           </div>
         </div>
@@ -102,6 +105,7 @@
 
 <ng-template #notfoundtemplate>
   <teemofeev-not-found
+    *ngIf="!loading"
     title="Project not found"
     [extra]="notfoundextratemplate"
   ></teemofeev-not-found>

@@ -17,10 +17,11 @@
           "options": {
             "outputPath": "dist/apps/website/browser",
             "index": "apps/website/src/index.html",
-            "main": "apps/website/src/main.ts",
+            "main": "apps/website/src/main.browser.ts",
             "polyfills": "apps/website/src/polyfills.ts",
             "tsConfig": "apps/website/tsconfig.app.json",
             "aot": true,
+            "preserveSymlinks": true,
             "assets": [
               "apps/website/src/favicon.ico",
               "apps/website/src/assets",
@@ -30,7 +31,9 @@
                 "output": "/assets/"
               }
             ],
-            "styles": ["apps/website/src/styles/index.less"],
+            "styles": [
+              "apps/website/src/styles/index.less"
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["apps/website/src/styles", "node_modules"]
             },
@@ -99,14 +102,15 @@
           "options": {
             "jestConfig": "apps/website/jest.config.js",
             "tsConfig": "apps/website/tsconfig.spec.json",
-            "setupFile": "apps/website/src/test-setup.ts"
+            "setupFile": "apps/website/src/test-setup.ts",
+            "passWithNoTests": true
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/apps/website/server",
-            "main": "apps/website/src/main.server.ts",
+            "main": "apps/website/server.ts",
             "tsConfig": "apps/website/tsconfig.server.json",
             "stylePreprocessorOptions": {
               "includePaths": ["apps/website/src/styles", "node_modules"]
@@ -115,6 +119,7 @@
           },
           "configurations": {
             "production": {
+              "bundleDependencies": true,
               "outputHashing": "media",
               "fileReplacements": [
                 {
@@ -125,6 +130,32 @@
               "sourceMap": false,
               "optimization": true
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "website:build",
+            "serverTarget": "website:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "website:build:production",
+              "serverTarget": "website:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "website:build:production",
+            "serverTarget": "website:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
@@ -177,78 +208,14 @@
           "options": {
             "jestConfig": "libs/data/jest.config.js",
             "tsConfig": "libs/data/tsconfig.spec.json",
-            "setupFile": "libs/data/src/test-setup.ts"
+            "setupFile": "libs/data/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "less"
-        }
-      }
-    },
-    "website-ssr": {
-      "root": "apps/website-ssr",
-      "sourceRoot": "apps/website-ssr/src",
-      "projectType": "application",
-      "prefix": "website-ssr",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@nrwl/node:build",
-          "options": {
-            "outputPath": "dist/apps/website-ssr",
-            "main": "apps/website-ssr/src/main.ts",
-            "tsConfig": "apps/website-ssr/tsconfig.app.json",
-            "assets": ["apps/website-ssr/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/website-ssr/src/environments/environment.ts",
-                  "with": "apps/website-ssr/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "website-ssr:build",
-            "port": 4001
-          }
-        },
-        "serve-all": {
-          "builder": "@angular-devkit/architect:concat",
-          "options": {
-            "targets": [
-              { "target": "website:build" },
-              { "target": "website:server" },
-              { "target": "website-ssr:serve" }
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/website-ssr/tsconfig.app.json",
-              "apps/website-swebs/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/website-ssr/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/website-ssr/jest.config.js",
-            "tsConfig": "apps/website-ssr/tsconfig.spec.json"
-          }
         }
       }
     }
