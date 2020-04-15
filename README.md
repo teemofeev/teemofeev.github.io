@@ -30,8 +30,9 @@ Run `ng serve my` for a dev server. Navigate to http://localhost:4200/. The app 
    - `yarn run ssr:prerender:list-static-routes` to generate the list of static routes
 
 2. Build & render ssr
-   - `yarn run ssr:build:universal` to build ssr website
-   - `yarn run ssr:prerender:serve-and-render` or (`yarn run ssr:serve:universal` and `yarn run ssr:prerender:render`) to serve ssr and render static files.
+   - `yarn run ssr:build:universal` to build ssr website.
+   - `yarn run ssr:serve:universal` to serve ssr website (keep this up until prerenderer process is RUNNING).
+   - `yarn run ssr:prerender:render` to render static files using server above.
    - now `dist/apps/website/browser/` should contain all static files and pages.
 
 3. Serve static with Docker

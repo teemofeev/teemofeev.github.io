@@ -29,7 +29,6 @@
     "ssr:serve:universal": "node dist/apps/website/server/main.js",
     "ssr:prerender:list-static-routes": "node scripts/list-routes.js",
     "ssr:prerender:render": "node --max_old_space_size=8192 -- ./node_modules/@angular/cli/bin/ng run website:prerender --routesFile static-routes.txt",
-    "ssr:prerender:serve-and-render": "yarn run ssr:serve:universal & yarn run ssr:prerender:render",
     "postinstall": "ngcc"
   },
   "private": true,
