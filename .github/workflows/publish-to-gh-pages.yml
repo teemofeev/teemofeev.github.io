@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,11 +26,17 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run ssr:build:universal
-    - run: npm run ssr:serve:universal & npm run ssr:prerender:render
+    - uses: fregante/setup-git-token@v1
+      with:
+        name: timadevelop
+        email: timadevelop@gmail.com
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - run: yarn install --frozen-lockfile
+    - run: yarn run ssr:build:universal
+    - run: yarn run ssr:serve:universal & yarn run ssr:prerender:render
     - run: chmod +x scripts/release.sh
     - name: Release to github pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CI: true
       run: ./scripts/release.sh
