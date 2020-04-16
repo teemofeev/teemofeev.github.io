@@ -42,6 +42,9 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
+    - name: Install project dependencies
+      if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
+      run: yarn install --frozen-lockfile
     - run: yarn run ssr:build:universal
     - run: yarn run ssr:serve:universal & yarn run ssr:prerender:render
     - run: chmod +x scripts/release.sh
