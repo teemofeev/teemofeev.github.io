@@ -31,7 +31,17 @@ jobs:
         name: timadevelop
         email: timadevelop@gmail.com
         token: ${{ secrets.GITHUB_TOKEN }}
-    - run: yarn install --frozen-lockfile
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - uses: actions/cache@v1
+      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
     - run: yarn run ssr:build:universal
     - run: yarn run ssr:serve:universal & yarn run ssr:prerender:render
     - run: chmod +x scripts/release.sh
