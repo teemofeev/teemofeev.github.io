@@ -1,7 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Prerender & Deploy website on gh-pages
 
 on:
   push:
@@ -28,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - uses: fregante/setup-git-token@v1
       with:
-        name: timadevelop
+        name: teemofeev-actions
         email: timadevelop@gmail.com
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Get yarn cache directory path
@@ -49,7 +46,4 @@ jobs:
     - run: yarn run ssr:serve:universal & yarn run ssr:prerender:render
     - run: chmod +x scripts/release.sh
     - name: Release to github pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        CI: true
       run: ./scripts/release.sh
