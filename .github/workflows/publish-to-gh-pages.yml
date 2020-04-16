@@ -40,10 +40,12 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - name: Install project dependencies
-      if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
       run: yarn install --frozen-lockfile
-    - run: yarn run ssr:build:universal
-    - run: yarn run ssr:serve:universal & yarn run ssr:prerender:render
+
+    - name: Build SSR bundles
+      run: yarn run ssr:build:universal
+    - name: Prerender pages
+      run: yarn run ssr:serve:universal & yarn run ssr:prerender:render
     - run: chmod +x scripts/release.sh
     - name: Release to github pages
       run: ./scripts/release.sh
