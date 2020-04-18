@@ -31,9 +31,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "apps/website/src/styles/index.less"
-            ],
+            "styles": ["apps/website/src/styles/index.less"],
             "stylePreprocessorOptions": {
               "includePaths": ["apps/website/src/styles", "node_modules"]
             },
@@ -150,9 +148,7 @@
           "options": {
             "browserTarget": "website:build:production",
             "serverTarget": "website:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}

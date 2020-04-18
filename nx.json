@@ -16,12 +16,18 @@
     },
     "website-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "website"
-      ]
+      "implicitDependencies": ["website"]
     },
     "data": {
       "tags": []
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   }
 }
