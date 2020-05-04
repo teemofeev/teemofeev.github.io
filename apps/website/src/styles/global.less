@@ -1,55 +1,32 @@
 @import (once) './theme.less';
-@import (once) './keyframes/index.less';
 
 body {
   overflow-y: scroll;
 }
 
+// hide overflow for CDK body
 .cdk-global-scrollblock body {
   overflow: hidden;
 }
 
+// all images should be full-width by default
 img {
   max-width: 100%;
 }
 
+
+// Icons
+// -----
 .anticon {
   margin-right: 5px;
 }
 
+
+// Tags
+// ----
 .ant-tag,
 .ant-tag.has-color {
   line-height: inherit !important;
-  // padding: 10px !important;
-
-  // color: @text-color;
-  // border: none;
-  // border-bottom: 3px solid @text-color;
-  // background-color: transparent !important;
-  // border-radius: 0;
-  // padding: 0;
-  // padding-bottom: 0px;
-  // &:hover {
-  //   border-bottom-color: transparent;
-  // }
-  // background-image: linear-gradient(
-  //   transparent 0%,
-  //   transparent calc(50% - 9px),
-  //   rgba(0, 255, 0, 0.35) calc(50% - 9px),
-  //   rgba(0, 255, 0, 0.35) 100%
-  // );
-  // transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
-  // background-size: 100% 200%;
-  // background-position: 0 0;
-  // &:hover {
-  //   background-image: linear-gradient(
-  //     transparent 0%,
-  //     transparent calc(50% - 9px),
-  //     rgba(0, 255, 0, 1) calc(50% - 9px),
-  //     rgba(0, 255, 0, 1) 100%
-  //   );
-  //   background-position: 0 100%;
-  // }
 }
 
 a .ant-tag {
@@ -57,43 +34,13 @@ a .ant-tag {
   // border-bottom-color: @link-color;
 }
 
-.spot {
-  @media (max-width: @screen-xs) {
-    display: none;
-  }
-  @media (min-width: @screen-xs) {
-    // display: block;
-    // object-fit: contain;
-    background: url('../assets/space.svg') no-repeat;
-    background-size: contain;
-    background-position: bottom right;
-    // .background-linear-gradient-calm();
-    // .border-radius-f();
-    z-index: -1;
-    // opacity: 0.5;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 50vw;
-    height: 100vh;
-  }
-}
-
 a > .ant-tag {
   cursor: pointer !important;
   line-height: 1.2;
 }
 
-.ant-btn,
-.ant-btn-primary {
-  font-size: @btn-font-size !important;
-}
-
-h4.nav-sub-title {
-  color: @text-color-secondary !important;
-  .scale-in-center();
-}
-
+// Drawer
+// ------
 .ant-drawer {
   &-mask {
     // background-image: linear-gradient(to right, rgba(223, 233, 243, .5) 0%, white 70%,  white 100%);
@@ -122,8 +69,16 @@ h4.nav-sub-title {
   }
 }
 
+
+// Menu
+// -----
 .ant-menu {
   background: transparent !important;
+}
+
+.ant-menu-item-selected > a,
+.ant-menu-item-selected > a:hover {
+  color: @white;
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   // #e6f7ff
@@ -141,6 +96,18 @@ h4.nav-sub-title {
   }
 }
 
+.ant-menu-item-group {
+  border-top: 0.3px solid @border-color-split;
+}
+
+.ant-menu-item-group-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+// Sections
+// --------
 section {
   max-width: @section-width-max;
   margin: auto;
@@ -154,5 +121,58 @@ section {
   .section-title {
     text-align: center;
     margin-bottom: 2em;
+    .section-subtitle {
+      &,
+      * {
+        color: @text-color-secondary;
+        font-weight: normal;
+        font-size: @font-size-base;
+      }
+    }
+  }
+
+  &.small {
+    max-width: @screen-lg;
   }
 }
+
+
+// Title
+// -----
+h1.giant-title {
+  font-size: 110px;
+  font-weight: bold;
+  @media screen and (max-width: @screen-lg) {
+    font-size: 90px;
+  }
+  @media screen and (max-width: @screen-md) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: @screen-sm + 30) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: @screen-xs) {
+    font-size: 50px;
+  }
+}
+
+h4.nav-sub-title {
+  color: @text-color-secondary !important;
+  .scale-in-center();
+}
+
+// Button
+// -----
+.ant-btn-lg {
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+// make a lighter animation, not .1 opacity as it's made by ant team
+[ant-click-animating-without-extra-node='true']::after,
+.ant-click-animating-node {
+  animation: none !important;
+  opacity: 0.7;
+}
+

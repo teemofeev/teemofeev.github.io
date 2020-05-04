@@ -3,6 +3,8 @@
 
 @import (reference) './backgrounds';
 
+@project-item-padding: @padding-lg - 10px;
+
 :host {
   .projects-list {
     margin-left: auto !important;
@@ -16,36 +18,51 @@
       min-height: 200px;
       position: relative;
       border-radius: @border-radius-base;
-      background-color: #B4B5B7;
+      border: @border-width-large solid @border-color-base;
+      background-color: transparent;
       background-size: cover;
-      padding: @padding-lg - 10px; // - gutter/2
-      color: @white;
+      padding: @project-item-padding; // - gutter/2
+      color: @black;
       transition: box-shadow 0.4s, transform 0.4s;
       &:hover {
         transform: translateY(-3px);
+        i.right-icon {
+          transform: translateX(3px);
+        }
       }
       .project-title {
-        color: @white;
+        color: @black;
         font-weight: bold;
         .sub-title {
           display: block;
-          font-size: .7em;
+          font-size: 0.7em;
+        }
+        img {
+          width: 24px;
+          height: 24px;
         }
       }
-      .project-extra {
+      img {
+        width: 164px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: @border-radius-base;
+      }
+      .project-extra,
+      i.right-icon {
         position: absolute;
-        bottom: 0;
+        bottom: @project-item-padding;
+        margin: 0;
+      }
+      .project-extra {
         font-size: @font-size-xs;
         font-weight: bold;
       }
-      img {
-        border-radius: @border-radius-base;
-        display: block;
-        position: absolute;
-        max-width: 30%;
-        max-height: 80%;
-        top: 5%;
-        right: 5%;
+      i.right-icon {
+        font-size: @font-size-base;
+        font-weight: bold;
+        right: @project-item-padding;
+        transition: transform 0.3s ease;
       }
     }
   }

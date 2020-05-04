@@ -2,6 +2,8 @@
   <!-- <h4 class="nav-sub-title">/ projects i ps i</h4> -->
   <h2 class="section-title">
     Projects I'm involved in
+    <br />
+    <p class="section-subtitle">I've been working on various projects since 2014.</p>
   </h2>
 
   <div nz-row nzGutter="20" class="projects-list">
@@ -36,16 +38,24 @@
     </ng-container>
 
     <ng-template #projectTemplate let-project="project">
-      <div class="project-content" [style.background-image]="'url(' + project.image + ')'">
-        <h3 class="project-title">
-          {{ project.title }}
-          <span class="sub-title" *ngIf="project.subTitle">{{ project.subTitle }}</span>
-        </h3>
-        <img
-          *ngIf="project?.icon"
-          [src]="project?.icon || 'assets/img-placeholder.png'"
-        />
+      <div class="project-content">
+        <div nz-row>
+          <h3 nz-col nzSpan="12" class="project-title">
+            {{ project.title }}
+            <img *ngIf="project?.icon" [src]="project?.icon" />
+            <span class="sub-title" *ngIf="project.subTitle">{{
+              project.subTitle
+            }}</span>
+          </h3>
+          <img
+            nz-col
+            nzSpan="12"
+            *ngIf="project?.image"
+            [src]="project?.image || 'assets/img-placeholder.png'"
+          />
+        </div>
         <p class="project-extra">{{ project.role }}</p>
+        <i class="right-icon" nz-icon nzType="right" nzTheme="outline"></i>
       </div>
     </ng-template>
   </div>

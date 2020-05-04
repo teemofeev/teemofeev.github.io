@@ -1,0 +1,43 @@
+@import (reference) 'theme.less';
+
+:host {
+  .footer {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    @media screen and (max-width: @screen-lg) {
+      margin-top: 50px;
+    }
+    .footer-container {
+      padding: 30px;
+      @media screen and (min-width: @screen-xs + 1) {
+        padding-right: 200px;
+      }
+      position: relative;
+
+      .social-media-logo {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        max-height: 380px;
+        max-width: 250px;
+        height: 30vh;
+        @media screen and (max-width: @screen-md + 100) {
+          transform: scaleX(-1);
+        }
+        @media screen and (max-width: @screen-xs) {
+          display: none;
+        }
+      }
+    }
+  }
+  .love {
+    text-align: center;
+    i {
+      color: #d63031;
+      opacity: .7;
+    }
+    &:hover i {
+      opacity: 1;
+    }
+  }
+}

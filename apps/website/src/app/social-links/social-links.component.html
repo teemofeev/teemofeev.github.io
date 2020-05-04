@@ -1,9 +1,11 @@
+<h2>Find me on these platforms:</h2>
+
 <div class="links">
-  <a target="_blank" [href]="mailHref" (click)="emailClick($event)">
+  <!-- <a target="_blank" [href]="mailHref" (click)="emailClick($event)">
     <nz-tag nzColor="#D44638">
       <i style="margin-right: 0" nz-icon nzType="mail" nzTheme="fill"></i>
     </nz-tag>
-  </a>
+  </a> -->
   <a target="_blank" href="https://facebook.com/teemofeev">
     <nz-tag nzColor="#3b5998">
       <i nz-icon nzType="facebook" nzTheme="fill"></i>
@@ -27,5 +29,14 @@
       <i nz-icon nzType="github" nzTheme="fill"></i>
       github
     </nz-tag>
+  </a>
+</div>
+<div class="btns">
+  <a [href]="'tel:' + phone">
+    <button nz-button nzSize="large" (click)="showPhone()">Call me</button>
+  </a>
+  <button nz-button nzSize="large" (click)="showPlace()">Meet me</button>
+  <a [href]="mailHref" (click)="emailClick($event)">
+    <button nz-button nzSize="large">Better email me</button>
   </a>
 </div>
