@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd';
+import { environment } from '../../environments/environment';
+
+const DEFAULT_EMAIL_ME_TEXT = 'Better email me';
 
 @Component({
   selector: 'teemofeev-social-links',
@@ -7,8 +10,12 @@ import { NzMessageService } from 'ng-zorro-antd';
   styleUrls: ['./social-links.component.less']
 })
 export class SocialLinksComponent {
-  private readonly _email = 'timadevelop@gmail.com';
+  public readonly phone = '+359878133834';
+  private readonly _place = 'Eastern Europe';
   public mailHref = null;
+
+  public emailMeText = DEFAULT_EMAIL_ME_TEXT;
+
   constructor(
     private nzMsg: NzMessageService
   ) { }
@@ -17,9 +24,21 @@ export class SocialLinksComponent {
     if (this.mailHref) {
       return;
     }
-    this.mailHref = `mailto:${this._email}`;
-    this.nzMsg.success(this._email, {
-      nzDuration: 3000,
+    this.mailHref = `mailto:${environment.email}`;
+    this.showMsg(`Check your email app. Here's my email: ${environment.email}`);
+  }
+
+  showPhone() {
+    this.showMsg(`Here's my phone: ${this.phone}`);
+  }
+
+  showPlace() {
+    this.showMsg(`I live in ${this._place}. Email me to arrange a meeting.`);
+  }
+
+  showMsg(text: string) {
+    this.nzMsg.success(text, {
+      nzDuration: 10000,
       nzPauseOnHover: true,
       nzAnimate: true
     });

@@ -1,20 +1,30 @@
-<nz-result nzStatus="404" [nzTitle]="title" [nzSubTitle]="subTitleTemplate">
-  <div nz-result-extra>
-    <ng-container *ngTemplateOutlet="extra ? extra : defaultExtraTemplate">
-    </ng-container>
-  </div>
+<section>
+  <div class="not-found">
+    <nz-result
+      nzStatus="info"
+      [nzIcon]="iconTemplate"
+      [nzTitle]="title"
+      [nzSubTitle]="subTitleTemplate"
+    >
+      <div nz-result-extra>
+        <ng-container *ngTemplateOutlet="extra ? extra : defaultExtraTemplate">
+        </ng-container>
+      </div>
 
-  <ng-template #subTitleTemplate>
-    <small>
-      <a routerLink="/">
-        <nz-tag nzColor="#303c52">Contact me</nz-tag>
-      </a>
-      if you couldn't find something.
-    </small>
-  </ng-template>
-  <ng-template #defaultExtraTemplate>
-    <a routerLink="/">
-      <button nz-button nzType="primary">Back Home</button>
-    </a>
-  </ng-template>
-</nz-result>
+      <ng-template #iconTemplate>
+        <img src="assets/404.svg" />
+      </ng-template>
+
+      <ng-template #subTitleTemplate>
+        <small>
+          Contact me if you couldn't find something.
+        </small>
+      </ng-template>
+      <ng-template #defaultExtraTemplate>
+        <a routerLink="/">
+          <button nz-button nzSize="large" nzType="primary">Back Home</button>
+        </a>
+      </ng-template>
+    </nz-result>
+  </div>
+</section>

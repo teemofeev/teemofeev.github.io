@@ -2,27 +2,29 @@
 @import (reference) 'mixins';
 
 :host {
-  display: block;
-  .border-radius-f();
-  .background-linear-gradient-fire();
-  .border-radius-animation-fast();
-  @media (max-width: @screen-sm) {
-    border-radius: @border-radius-lg;
-  }
-
-  max-width: 600px;
-  margin: auto;
-  padding: 1em;
-  nz-result {
-    text-align: center;
-    ::ng-deep * {
-      color: @white;
-      // font-weight: bold;
+  .not-found {
+    display: block;
+    .border-radius-f();
+    // .background-linear-gradient-fire();
+    // .border-radius-animation-fast();
+    @media (max-width: @screen-sm) {
+      border-radius: @border-radius-base;
     }
+    border: @border-width-large solid @border-color-base;
 
-    nz-tag {
-      font-size: inherit;
-      margin-right: 0;
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+
+    nz-result {
+      @media (max-width: @screen-xs) {
+        padding: @padding-xs;
+      }
+      text-align: center;
+      nz-tag {
+        font-size: inherit;
+        margin-right: 0;
+      }
     }
   }
 }

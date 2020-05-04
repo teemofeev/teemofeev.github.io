@@ -141,9 +141,8 @@
     "subTitle": "@brainhub",
     "slug": "diana",
     "role": "Full Stack Engineer",
-    "image": "assets/patterns/liquid.svg",
+    "image": "assets/logos/diana_web.jpg",
     "description": "assets/texts/projects/diana.md",
-    "icon": "assets/logos/diana_web.jpg",
     "links": [
       {
         "href": "https://brainhub.co/projects/diana",

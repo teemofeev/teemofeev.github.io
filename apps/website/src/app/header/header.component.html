@@ -1,21 +1,21 @@
 <section>
   <div nz-row>
     <div nz-col nzSpan="12">
-      <a [routerLink]="['/']">
-        <h1><b>teemofeev.</b></h1>
-      </a>
+      <ul nz-menu nzMode="horizontal" class="main-menu">
+        <li nz-menu-item nzMatchRouter class="always-visible">
+          <a [routerLink]="['/']">
+            <h1><b>Vlad Timofeev.</b></h1>
+          </a>
+        </li>
+      </ul>
     </div>
     <div nz-col nzSpan="12">
-      <ul nz-menu nzMode="horizontal" class="main-menu">
+      <ul nz-menu nzMode="horizontal" class="main-menu right">
         <li nz-menu-item nzMatchRouter>
-          <a [routerLink]="['/', 'projects']"
-            >Projects</a
-          >
+          <a [routerLink]="['/', 'projects']">Projects</a>
         </li>
         <li nz-menu-item nzMatchRouter>
-          <a [routerLink]="['/', 'story']"
-            >Story</a
-          >
+          <a [routerLink]="['/', 'story']">Story</a>
         </li>
         <li nz-menu-item nzMatchRouter>
           <a [routerLink]="['/', 'trips']">Trips</a>
@@ -48,7 +48,7 @@
     </li>
     <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
       <a [routerLink]="['/', 'projects']"
-        ><i nz-icon nzType="project"></i>Projects</a
+        ><i nz-icon nzType="fire"></i>Projects</a
       >
     </li>
     <li nz-menu-item nzMatchRouter (click)="closeNavigation()">

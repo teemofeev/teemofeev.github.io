@@ -1,60 +1,46 @@
-<section>
-  <div
-    nz-row
-    [nzGutter]="{ xs: 0, xl: 30 }"
-    nzType="flex"
-    nzAlign="middle"
-    nzJustify="center"
-    class="intro-row"
-  >
-    <div nz-col nzSpan="24" [nzLg]="{ span: 14 }" class="description">
-      <div [class.animation-container]="isBrowser">
-        <img
-          style="height: 10vh; animation: none; transform: scaleX(-1);"
-          src="assets/scooby.gif"
-        />
-        <!-- <img style="height: 10vh" src="https://media.giphy.com/media/3pTZ5pUYLUHh6/source.gif"/> -->
-        <h1 nz-title>
-          Hey there, my name is Vlad.
-          I'm a Software engineer and part of the
-          <a target="_blank" href="https://brainhub.co">
-            <nz-tag nzColor="#60a9a6">
-              <i nz-icon nzType="teemofeev:brainhub"></i>BrainHub
-            </nz-tag>
-          </a>
-          core team.
-        </h1>
-      </div>
-      <div>
-        <h2 style="font-weight: normal;" nz-paragraph>
-          I love cars,
-          <a routerLink="/trips"> road trips</a>, and solving
-          <a routerLink="/projects">
-            <nz-tag nzColor="#fda085">problems</nz-tag>
-          </a>
-          using
-          <a routerLink="/story"><nz-tag nzColor="#764ba2">software</nz-tag></a
-          >.
-        </h2>
-        <p>
-          <!-- <teemofeev-social-links></teemofeev-social-links> -->
-        </p>
-      </div>
+<section class="small intro">
+  <div class="intro-text">
+    <div [class.animation-container]="isBrowser">
+      <!-- <img
+        style="height: 10vh; animation: none; transform: scaleX(-1);"
+        src="assets/scooby.gif"
+      /> -->
+      <h1 nz-title class="giant-title">Hey friend,<br />my name is Vlad.</h1>
     </div>
-    <div class="spaceship-col" nz-col nzSpan="24" [nzLg]="{ span: 10 }">
-      <!-- <img (mouseenter)="flyAway($event)" class="spaceship" src="assets/spaceship.svg"/> -->
-      <img
-        class="gif"
-        src="assets/ride.gif"
-        title="GIF by https://www.gsimfab.com/"
-      />
-      <!-- <div class="holder"> -->
-      <!-- <a><img src="assets/asus.png"/></a>
-        <a><img src="assets/van.png" /></a>
-        <a><img src="assets/pack.png" /></a> -->
-      <!-- <teemofeev-work-table></teemofeev-work-table> -->
-      <!-- </div> -->
+    <div>
+      <h2>
+        I love cars, road trips, and solving problems using software.
+      </h2>
+      <p></p>
     </div>
   </div>
-  <!-- <div class="spot"></div> -->
+  <div nz-row nzJustify="center" class="cta-container">
+    <a href="mailto:timadevelop@gmail.com">
+      <button nz-button nzType="primary" nzSize="large">Email me</button>
+    </a>
+    <h2>
+      <a routerLink="/projects"
+        ><i nz-icon nzType="fire" nzTheme="fill"></i> see my projects</a
+      >
+    </h2>
+  </div>
+  <div class="ride-container">
+    <img
+      class="large-border border-radius-base"
+      src="assets/ride.gif"
+      title="GIF by https://www.gsimfab.com/"
+    />
+  </div>
+</section>
+
+<section style="margin-top: 70px;" class="small">
+  <div nz-row nzJustify="center" nzAlign="middle" class="subscribe">
+    <div nz-col nzSpan="24">
+      <h1>Get news from me in your inbox</h1>
+      <p><b>Sign up to my email list</b></p>
+      <a target="_blank" href="http://eepurl.com/g2awd9">
+        <button nz-button nzType="primary" nzSize="large">Subscribe</button>
+      </a>
+    </div>
+  </div>
 </section>

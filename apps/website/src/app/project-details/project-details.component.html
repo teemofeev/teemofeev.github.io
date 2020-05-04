@@ -2,100 +2,67 @@
   <!-- <h4 class="nav-sub-title">/ projects i ps i</h4> -->
   <nz-spin nzTip="Loading..." [nzSpinning]="loading">
     <div *ngIf="project; else notfoundtemplate">
-      <h2 class="section-title">
-        <a routerLink="..">Projects</a> / {{ project?.title }}
+      <h2 nz-title class="section-title">
+        {{ project?.title }}
+        <br />
+        <p class="section-subtitle"><a routerLink="..">Project</a></p>
       </h2>
-      <div
-        class="project-wrapper"
-        [style.background-image]="
-          'url(' + (project?.image || 'assets/img-placeholder.png') + ')'
-        "
-      >
+      <div class="project-wrapper">
+        <label class="project-image">
+          <input type="checkbox" name="toggle" />
+          <span
+            [style.background-image]="
+              'url(' + (project?.image || 'assets/img-placeholder.png') + ')'
+            "
+          ></span>
+          <small class="hint">Click to hide the image</small>
+        </label>
+        <!-- <input type="checkbox" class="project-sub-background" /> -->
         <div
           *ngIf="project"
           nz-row
           nzType="flex"
           nzAlign="stretch"
-          class="project-content"
+          class="project-content-wrapper"
         >
-          <div nz-col nzSpan="24" [nzOrder]="1" [nzMd]="{ span: 12, order: 0 }">
-            <h1 class="project-title">
-              {{ project?.title }}
-              <span class="project-role">
-                as <nz-tag nzColor="#303c52">{{ project?.role }}</nz-tag>
-              </span>
-            </h1>
-          </div>
-          <div nz-col nzSpan="24" [nzMd]="12">
-            <img
-              *ngIf="project?.icon"
-              [src]="project?.icon || 'assets/img-placeholder.png'"
-            />
-          </div>
-          <div nz-col nzSpan="24" nzOrder="3">
-            <markdown class="markdown" [src]="project?.description"></markdown>
-          </div>
-          <!-- <div nz-col nzSpan="24" nzOrder="4">
-            <div class="stack">
-              <p class="stack-title">Links</p>
-              <a
-                target="_blank"
-                [href]="si.href"
-                *ngFor="let si of project.links"
-              >
-                <nz-tag [nzColor]="si.color">
-                  {{ si.text }}
-                </nz-tag>
-              </a>
+          <div class="project-content">
+            <div nz-col nzSpan="24">
+              <h1 class="project-title">
+                {{ project?.title }}
+                <img *ngIf="project?.icon" [src]="project?.icon" />
+                <span class="project-role">
+                  as a <nz-tag nzColor="#303c52">{{ project?.role }}</nz-tag>
+                </span>
+              </h1>
             </div>
-            <div class="stack">
-              <p class="stack-title">Stack</p>
-              <nz-tag *ngFor="let si of project.stack" [nzColor]="si.color">
-                <i *ngIf="si.icon" nz-icon [nzType]="si.icon"></i>
-                {{ si.tech }}
-              </nz-tag>
-            </div>
-          </div> -->
-          <!-- <div nz-col nzSpan="24" nzOrder="4">
-            <p class="small-tags">
-              Links
-              <a
-                target="_blank"
-                [href]="si.href"
-                *ngFor="let si of project.links"
-              >
-                <nz-tag [nzColor]="si.color">
+            <div nz-col nzSpan="24" nzOrder="3">
+              <p class="secondary-tags">
+                <a
+                  target="_blank"
+                  [href]="si.href"
+                  *ngFor="let si of project.links"
+                >
                   {{ si.text }}
-                </nz-tag>
-              </a>
-            </p>
-            <p class="small-tags">
-              Stack
-              <nz-tag *ngFor="let si of project.stack" [nzColor]="si.color">
-                <i *ngIf="si.icon" nz-icon [nzType]="si.icon"></i>
-                {{ si.tech }}
-              </nz-tag>
-            </p>
-          </div> -->
-          <div nz-col nzSpan="24" nzOrder="4">
-            <p class="secondary-tags">
-              <a
-                target="_blank"
-                [href]="si.href"
-                *ngFor="let si of project.links"
-              >
-                {{ si.text }}
-              </a>
-              <span
-                *ngIf="project?.stack?.length > 0 && project?.links?.length > 0"
-              >
-                |
-              </span>
-              <span *ngFor="let si of project.stack">
-                <i *ngIf="si.icon" nz-icon [nzType]="si.icon"></i>
-                {{ si.tech }}
-              </span>
-            </p>
+                </a>
+                <span
+                  *ngIf="
+                    project?.stack?.length > 0 && project?.links?.length > 0
+                  "
+                >
+                  |
+                </span>
+                <span *ngFor="let si of project.stack">
+                  <i *ngIf="si.icon" nz-icon [nzType]="si.icon"></i>
+                  {{ si.tech }}
+                </span>
+              </p>
+            </div>
+            <div nz-col nzSpan="24" nzOrder="4">
+              <markdown
+                class="markdown"
+                [src]="project?.description"
+              ></markdown>
+            </div>
           </div>
         </div>
       </div>

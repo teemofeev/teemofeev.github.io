@@ -17,6 +17,7 @@ import {
   NzBackTopModule,
   NzTypographyModule,
   NzMessageServiceModule,
+  NzInputModule,
 } from 'ng-zorro-antd';
 import { MarkdownModule } from 'ngx-markdown';
 import { FormsModule } from '@angular/forms';
@@ -37,6 +38,7 @@ import { DataModule } from '@teemofeev/data';
 import { SoftwareStoryComponent } from './software-story/software-story.component';
 import { TripsMapComponent } from './trips-map/trips-map.component';
 import { httpInterceptorProviders } from './interceptors';
+import { FooterComponent } from './footer/footer.component';
 
 registerLocaleData(en);
 
@@ -51,7 +53,8 @@ registerLocaleData(en);
     ProjectsComponent,
     ProjectDetailsComponent,
     SoftwareStoryComponent,
-    TripsMapComponent
+    TripsMapComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -72,6 +75,7 @@ registerLocaleData(en);
     NzBackTopModule,
     NzTypographyModule,
     NzMessageServiceModule,
+    NzInputModule,
     DataModule
   ],
   providers: [
