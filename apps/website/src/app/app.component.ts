@@ -5,7 +5,6 @@ import { NzIconService, NzConfigService } from 'ng-zorro-antd';
 import * as bhLit from '!raw-loader!../assets/logos/brainhub.svg';
 import * as archlinuxLiteral from '!raw-loader!../assets/logos/archlinux.svg';
 import * as menuLiteral from '!raw-loader!../assets/menu.svg';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'teemofeev-root',

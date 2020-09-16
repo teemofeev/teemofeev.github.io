@@ -1,17 +1,24 @@
-[
-  {
+[{
     "title": "Brainhub",
     "slug": "brainhub",
     "role": "Co-founder, software engineer",
     "image": "assets/patterns/mountains.svg",
     "description": "assets/texts/projects/brainhub.md",
     "icon": "assets/logos/brainhub.svg",
-    "stack": [
-      { "tech": "Prototyping", "color": "#1771F1" },
-      { "tech": "R&D", "color": "#FE9E76" }
+    "stack": [{
+        "tech": "Prototyping",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "R&D",
+        "color": "#FE9E76"
+      }
     ],
-    "links": [
-      { "href": "https://brainhub.co", "color": "#1772F1", "text": "Website" },
+    "links": [{
+        "href": "https://brainhub.co",
+        "color": "#1772F1",
+        "text": "Website"
+      },
       {
         "href": "https://www.facebook.com/brainhublab",
         "color": "#1772F1",
@@ -36,41 +43,303 @@
     "role": "Software engineer",
     "image": "assets/patterns/gr_back.jpg",
     "description": "assets/texts/projects/gr.md",
-    "stack": [
-      { "tech": "Gestures", "color": "#FE9E76" },
-      { "tech": "C/C++", "color": "#FE9E76" },
-      { "tech": "OpenGL", "color": "#FE9E76" },
-      { "tech": "ML", "color": "#1771F1" },
-      { "tech": "VR", "color": "#00CF91" },
-      { "tech": "Research", "color": "#00CF91" }
-    ],
-    "links": [
+    "stack": [{
+        "tech": "Gestures",
+        "color": "#FE9E76"
+      },
       {
-        "href": "https://brainhub.co/projects/gr",
+        "tech": "C/C++",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "OpenGL",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "ML",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "VR",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Research",
+        "color": "#00CF91"
+      }
+    ],
+    "links": [{
+      "href": "https://brainhub.co/projects/gr",
+      "color": "#1772F1",
+      "text": "Website"
+    }]
+  },
+  {
+    "title": "Realtime media streaming project",
+    "subTitle": "@brainhub x @2c*(n8a",
+    "slug": "cstream",
+    "role": "Software Engineer",
+    "image": "assets/logos/webrtc.svg",
+    "description": "assets/texts/projects/cstream.md",
+    "stack": [{
+        "tech": "Outsource",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "WebRTC",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "C / C++",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Gstreamer",
+        "color": "#1772F1"
+      },
+      {
+        "tech": "Golang",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "XMPP",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Janus",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Jitsi",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Angular",
+        "color": "#FE9E76"
+      }
+    ],
+    "links": []
+  },
+  {
+    "title": "WHP",
+    "subTitle": "@brainhub outsource",
+    "slug": "wirelesshealthplatform",
+    "role": "Full Stack Engineer",
+    "image": "assets/logos/diana_web.jpg",
+    "description": "assets/texts/projects/wirelesshealthplatform.md",
+    "links": [{
+      "href": "https://brainhub.co/projects/diana",
+      "color": "#1772f1",
+      "text": "Website"
+    }],
+    "stack": [{
+        "tech": "React",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Django",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Node.js",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "WebSockets",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Streaming",
+        "color": "#00CF91"
+      }
+    ]
+  },
+
+  {
+    "title": "Servicescope",
+    "subTitle": "@brainhub",
+    "slug": "servicescope",
+    "role": "Full Stack Engineer",
+    "image": "assets/patterns/boxes.svg",
+    "description": "assets/texts/projects/servicescope.md",
+    "links": [{
+        "href": "https://www.facebook.com/servicescope",
+        "color": "#1772F1",
+        "text": "Facebook"
+      },
+      {
+        "href": "https://github.com/timadevelop/saasWebClient",
+        "text": "Git"
+      }
+    ],
+    "stack": [{
+        "tech": "Angular",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "WebSockets",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Django",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "APIs",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Payments",
+        "color": "#00CF91"
+      }
+    ]
+  },
+  {
+    "title": "Education43",
+    "subTitle": "@home",
+    "slug": "https://education43.teemofeev.com/",
+    "role": "",
+    "image": "assets/patterns/randomized.svg",
+    "description": ""
+  },
+  {
+    "title": "SFML graphics",
+    "slug": "sfml",
+    "role": "Student",
+    "image": "assets/patterns/sfml_game.png",
+    "description": "assets/texts/projects/sfml.md",
+    "links": [{
+      "href": "https://github.com/timadevelop/SFMLPractice",
+      "color": "#1772F1",
+      "text": "Github"
+    }],
+    "stack": [{
+        "tech": "Graphics",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Game design",
+        "color": "#1771F1"
+      }
+    ]
+  },
+  {
+    "title": "Tavle",
+    "subTitle": "teenage",
+    "slug": "tavle",
+    "role": "Schoolboy",
+    "image": "assets/patterns/stingrays.svg",
+    "description": "assets/texts/projects/tavle.md",
+    "stack": [{
+        "tech": "Ideas",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Social",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Node.js",
+        "color": "#1771F1"
+      }
+    ]
+  },
+  {
+    "title": "The Knob",
+    "subTitle": "@brainhub",
+    "slug": "theknob",
+    "role": "Web developer",
+    "image": "assets/patterns/knob.jpg",
+    "description": "assets/texts/projects/knob.md",
+    "links": [{
+        "href": "https://brainhub.co/projects/theknob",
         "color": "#1772F1",
         "text": "Website"
+      },
+      {
+        "href": "https://www.instagram.com/theknob_/",
+        "color": "#1772F1",
+        "text": "Instagram"
+      }
+    ],
+    "stack": [{
+        "tech": "HCI",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Audio",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Concrete",
+        "color": "#FE9E76"
+      }
+    ]
+  },
+  {
+    "title": "Agrobot",
+    "subTitle": "@brainhub",
+    "slug": "agrobot",
+    "role": "Frontend dev",
+    "image": "assets/patterns/agrobot.png",
+    "description": "assets/texts/projects/agrobot.md",
+    "links": [      {
+        "href": "https://github.com/brainhublab",
+        "text": "Git"
+      }
+    ],
+    "stack": [{
+        "tech": "Angular",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "MQTT",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Litegraph.js",
+        "color": "#FE9E76"
       }
     ]
   },
   {
     "title": "Tinusaur",
-    "subTitle": "@brainhub",
+    "subTitle": "@brainhub x @tinusaur",
     "slug": "tinusaur",
     "role": "Full Stack Engineer",
     "image": "assets/patterns/radiant.svg",
     "description": "assets/texts/projects/tinusaur.md",
     "icon": "assets/logos/tinusaur.svg",
-    "stack": [
-      { "tech": "Python", "color": "#FE9E76" },
-      { "tech": "Django", "color": "#FE9E76" },
-      { "tech": "WebSockets", "color": "#00CF91" },
-      { "tech": "Angular", "color": "#1771F1" }
-    ],
-    "links": [
+    "stack": [{
+        "tech": "Outsource",
+        "color": "#FE9E76"
+      },
       {
+        "tech": "Python",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Django",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "WebSockets",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Angular",
+        "color": "#1771F1"
+      }
+    ],
+    "links": [{
         "href": "https://tinusaur.com/",
         "color": "#1772F1",
         "text": "Website"
+      },
+      {
+        "href": "https://gitlab.com/tinusaur",
+        "color": "#1772F1",
+        "text": "GitLab"
       },
       {
         "href": "https://www.facebook.com/tinusaur/",
@@ -85,106 +354,74 @@
     ]
   },
   {
-    "title": "The Knob",
-    "subTitle": "@brainhub",
-    "slug": "theknob",
-    "role": "Web developer",
-    "image": "assets/patterns/knob.jpg",
-    "description": "assets/texts/projects/knob.md",
-    "links": [
-      {
-        "href": "https://brainhub.co/projects/theknob",
-        "color": "#1772F1",
-        "text": "Website"
-      },
-      {
-        "href": "https://www.instagram.com/theknob_/",
-        "color": "#1772F1",
-        "text": "Instagram"
-      }
-    ],
-    "stack": [
-      { "tech": "HCI", "color": "#00CF91" },
-      { "tech": "Audio", "color": "#1771F1" },
-      { "tech": "Concrete", "color": "#FE9E76" }
-    ]
-  },
-  {
-    "title": "GetMaker",
-    "subTitle": "@brainhub",
-    "slug": "getmaker",
-    "role": "Full Stack Engineer",
-    "image": "assets/patterns/boxes.svg",
-    "description": "assets/texts/projects/getmaker.md",
-    "links": [
-      {
-        "href": "https://brainhub.co/projects/getmaker",
-        "color": "#1772F1",
-        "text": "Website"
-      },
-      {
-        "href": "https://www.facebook.com/getmaker",
-        "color": "#1772F1",
-        "text": "Facebook"
-      }
-    ],
-    "stack": [
-      { "tech": "Angular", "color": "#FE9E76" },
-      { "tech": "WebSockets", "color": "#1771F1" },
-      { "tech": "Django", "color": "#00CF91" },
-      { "tech": "APIs", "color": "#00CF91" },
-      { "tech": "Payments", "color": "#00CF91" }
-    ]
-  },
-  {
-    "title": "DIANA",
-    "subTitle": "@brainhub",
-    "slug": "diana",
-    "role": "Full Stack Engineer",
-    "image": "assets/logos/diana_web.jpg",
-    "description": "assets/texts/projects/diana.md",
-    "links": [
-      {
-        "href": "https://brainhub.co/projects/diana",
-        "color": "#1772f1",
-        "text": "Website"
-      }
-    ],
-    "stack": [
-      { "tech": "React", "color": "#FE9E76" },
-      { "tech": "Django", "color": "#1771F1" },
-      { "tech": "Node.js", "color": "#00CF91" },
-      { "tech": "WebSockets", "color": "#00CF91" },
-      { "tech": "Streaming", "color": "#00CF91" }
-    ]
-  },
-  {
     "title": "T5MTOKYFOtFv",
-    "subTitle": "@brainhub",
+    "subTitle": "@brainhub outsource",
     "slug": "T5MTOKYFOtFv",
     "role": "Software engineer",
     "image": "assets/patterns/triangles.svg",
     "description": "assets/texts/projects/T5MTOKYFOtFv.md",
     "links": [],
     "stack": [
-      { "tech": "React", "color": "#FE9E76" },
-      { "tech": "react-spring", "color": "#FE9E76" },
-      { "tech": "Node.js (Nest.js)", "color": "#1771F1" },
-      { "tech": "Electron", "color": "#1771F1" },
-      { "tech": "Prototyping", "color": "#1771F1" }
+      {
+        "tech": "Outsource",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "React",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "react-spring",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Node.js (Nest.js)",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Electron",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Prototyping",
+        "color": "#1771F1"
+      }
     ]
   },
   {
-    "title": "Tavle",
-    "slug": "tavle",
-    "role": "Schoolboy",
-    "image": "assets/patterns/stingrays.svg",
-    "description": "assets/texts/projects/tavle.md",
+    "title": "k#j((78das)*s98&!",
+    "subTitle": "@brainhub outsource",
+    "slug": "outsourcewebproject",
+    "role": "Django developer",
+    "image": "assets/logos/wagtail.svg",
+    "description": "assets/texts/projects/outsourcewebproject.md",
     "stack": [
-      { "tech": "Ideas", "color": "#FE9E76" },
-      { "tech": "Social", "color": "#1771F1" },
-      { "tech": "Node.js", "color": "#1771F1" }
-    ]
+      {
+        "tech": "Outsource",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Wagtail",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Python",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Web",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Docker",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "boring",
+        "color": "#00CF91"
+      }
+    ],
+    "links": []
   },
   {
     "title": "Elixir file content search lib",
@@ -192,34 +429,19 @@
     "role": "Student",
     "image": "assets/patterns/elixir.svg",
     "description": "assets/texts/projects/fcs.md",
-    "links": [
+    "links": [{
+      "href": "https://github.com/timadevelop/fcs",
+      "color": "#1772F1",
+      "text": "Github"
+    }],
+    "stack": [{
+        "tech": "Elixir",
+        "color": "#FE9E76"
+      },
       {
-        "href": "https://github.com/timadevelop/fcs",
-        "color": "#1772F1",
-        "text": "Github"
+        "tech": "Functional Programming",
+        "color": "#1771F1"
       }
-    ],
-    "stack": [
-      { "tech": "Elixir", "color": "#FE9E76" },
-      { "tech": "Functional Programming", "color": "#1771F1" }
-    ]
-  },
-  {
-    "title": "SFML graphics",
-    "slug": "sfml",
-    "role": "Student",
-    "image": "assets/patterns/sfml_game.png",
-    "description": "assets/texts/projects/sfml.md",
-    "links": [
-      {
-        "href": "https://github.com/timadevelop/SFMLPractice",
-        "color": "#1772F1",
-        "text": "Github"
-      }
-    ],
-    "stack": [
-      { "tech": "Graphics", "color": "#FE9E76" },
-      { "tech": "Game design", "color": "#1771F1" }
     ]
   },
   {

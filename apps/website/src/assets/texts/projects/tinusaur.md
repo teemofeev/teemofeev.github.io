@@ -8,4 +8,8 @@ We with @tinusaur work on the Blocktinu - a web-based platform for teachers and 
 
 We believe that kids can code so we implemented both code editor and visual block-based editor for them in our web interface.
 
+Source links:
+- [Backend - gitlab.com/tinusaur](https://gitlab.com/tinusaur/blocktinu-webui)
+- [Frontend - gitlab.com/tinusaur](https://gitlab.com/tinusaur/blocktinu-backend)
+
 The V2.0 prototype was written in one month.
