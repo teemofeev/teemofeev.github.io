@@ -15,9 +15,9 @@
       }
     ],
     "links": [{
-        "href": "https://brainhub.co",
+        "href": "https://github.com/brainhublab",
         "color": "#1772F1",
-        "text": "Website"
+        "text": "Github"
       },
       {
         "href": "https://www.facebook.com/brainhublab",
@@ -25,9 +25,9 @@
         "text": "Facebook"
       },
       {
-        "href": "https://github.com/brainhublab",
+        "href": "https://brainhub.co",
         "color": "#1772F1",
-        "text": "Github"
+        "text": "Website"
       },
       {
         "href": "https://medium.com/@brainhublab",
@@ -69,10 +69,21 @@
       }
     ],
     "links": [{
-      "href": "https://brainhub.co/projects/gr",
-      "color": "#1772F1",
-      "text": "Website"
-    }]
+        "href": "https://github.com/brainhublab/grSDK",
+        "color": "#1772F1",
+        "text": "git/sdk"
+      },
+      {
+        "href": "https://github.com/brainhublab/grUI",
+        "color": "#1772F1",
+        "text": "git/ui"
+      },
+      {
+        "href": "https://github.com/brainhublab/grFirmware",
+        "color": "#1772F1",
+        "text": "git/firmware"
+      }
+    ]
   },
   {
     "title": "Realtime media streaming project",
@@ -127,11 +138,7 @@
     "role": "Full Stack Engineer",
     "image": "assets/logos/diana_web.jpg",
     "description": "assets/texts/projects/wirelesshealthplatform.md",
-    "links": [{
-      "href": "https://brainhub.co/projects/diana",
-      "color": "#1772f1",
-      "text": "Website"
-    }],
+    "links": [],
     "stack": [{
         "tech": "React",
         "color": "#FE9E76"
@@ -230,6 +237,11 @@
     "role": "Schoolboy",
     "image": "assets/patterns/stingrays.svg",
     "description": "assets/texts/projects/tavle.md",
+    "links": [{
+      "href": "https://github.com/timadevelop/tavle",
+      "color": "#00CF91",
+      "text": "Source"
+    }],
     "stack": [{
         "tech": "Ideas",
         "color": "#FE9E76"
@@ -252,9 +264,9 @@
     "image": "assets/patterns/knob.jpg",
     "description": "assets/texts/projects/knob.md",
     "links": [{
-        "href": "https://brainhub.co/projects/theknob",
+        "href": "https://github.com/brainhublab/TheKnob",
         "color": "#1772F1",
-        "text": "Website"
+        "text": "Github"
       },
       {
         "href": "https://www.instagram.com/theknob_/",
@@ -283,9 +295,17 @@
     "role": "Frontend dev",
     "image": "assets/patterns/agrobot.png",
     "description": "assets/texts/projects/agrobot.md",
-    "links": [      {
-        "href": "https://github.com/brainhublab",
-        "text": "Git"
+    "links": [{
+        "href": "https://github.com/brainhublab/agrobot-web-client",
+        "text": "git/webclient"
+      },
+      {
+        "href": "https://github.com/brainhublab/agrobot-api",
+        "text": "git/api"
+      },
+      {
+        "href": "https://github.com/brainhublab/agrobot-firmware",
+        "text": "git/firmware"
       }
     ],
     "stack": [{
@@ -361,8 +381,7 @@
     "image": "assets/patterns/triangles.svg",
     "description": "assets/texts/projects/T5MTOKYFOtFv.md",
     "links": [],
-    "stack": [
-      {
+    "stack": [{
         "tech": "Outsource",
         "color": "#FE9E76"
       },
@@ -395,8 +414,7 @@
     "role": "Django developer",
     "image": "assets/logos/wagtail.svg",
     "description": "assets/texts/projects/outsourcewebproject.md",
-    "stack": [
-      {
+    "stack": [{
         "tech": "Outsource",
         "color": "#FE9E76"
       },
