@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  email: 'timadevelop@gmail.com'
+  email: 'timadevelop@gmail.com',
+  siteUrl: 'https://teemofeev.com'
 };
 
 /*

@@ -41,7 +41,7 @@
     "subTitle": "@brainhub",
     "slug": "gr",
     "role": "Software engineer",
-    "image": "assets/patterns/gr_back.jpg",
+    "image": "assets/gr/gr_back.jpg",
     "description": "assets/texts/projects/gr.md",
     "stack": [{
         "tech": "Gestures",
@@ -132,42 +132,11 @@
     "links": []
   },
   {
-    "title": "WHP",
-    "subTitle": "@brainhub outsource",
-    "slug": "wirelesshealthplatform",
-    "role": "Full Stack Engineer",
-    "image": "assets/logos/diana_web.jpg",
-    "description": "assets/texts/projects/wirelesshealthplatform.md",
-    "links": [],
-    "stack": [{
-        "tech": "React",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "Django",
-        "color": "#1771F1"
-      },
-      {
-        "tech": "Node.js",
-        "color": "#00CF91"
-      },
-      {
-        "tech": "WebSockets",
-        "color": "#00CF91"
-      },
-      {
-        "tech": "Streaming",
-        "color": "#00CF91"
-      }
-    ]
-  },
-
-  {
     "title": "Servicescope",
     "subTitle": "@brainhub",
     "slug": "servicescope",
     "role": "Full Stack Engineer",
-    "image": "assets/patterns/boxes.svg",
+    "image": "assets/servicescope/filtering.jpg",
     "description": "assets/texts/projects/servicescope.md",
     "links": [{
         "href": "https://www.facebook.com/servicescope",
@@ -208,6 +177,87 @@
     "role": "",
     "image": "assets/patterns/randomized.svg",
     "description": ""
+  },
+  {
+    "title": "Tinusaur",
+    "subTitle": "@brainhub x @tinusaur",
+    "slug": "tinusaur",
+    "role": "Full Stack Engineer",
+    "image": "assets/blocktinu.png",
+    "description": "assets/texts/projects/tinusaur.md",
+    "icon": "assets/logos/tinusaur.svg",
+    "stack": [{
+        "tech": "Outsource",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Python",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Django",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "WebSockets",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Angular",
+        "color": "#1771F1"
+      }
+    ],
+    "links": [{
+        "href": "https://tinusaur.com/",
+        "color": "#1772F1",
+        "text": "Website"
+      },
+      {
+        "href": "https://gitlab.com/tinusaur",
+        "color": "#1772F1",
+        "text": "GitLab"
+      },
+      {
+        "href": "https://www.facebook.com/tinusaur/",
+        "color": "#1772F1",
+        "text": "Facebook"
+      },
+      {
+        "href": "https://www.instagram.com/tinusaur/",
+        "color": "#1772F1",
+        "text": "Instagram"
+      }
+    ]
+  },
+  {
+    "title": "WHP",
+    "subTitle": "@brainhub outsource",
+    "slug": "wirelesshealthplatform",
+    "role": "Full Stack Engineer",
+    "image": "assets/logos/diana_web.jpg",
+    "description": "assets/texts/projects/wirelesshealthplatform.md",
+    "links": [],
+    "stack": [{
+        "tech": "React",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Django",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Node.js",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "WebSockets",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Streaming",
+        "color": "#00CF91"
+      }
+    ]
   },
   {
     "title": "SFML graphics",
@@ -323,57 +373,6 @@
     ]
   },
   {
-    "title": "Tinusaur",
-    "subTitle": "@brainhub x @tinusaur",
-    "slug": "tinusaur",
-    "role": "Full Stack Engineer",
-    "image": "assets/patterns/radiant.svg",
-    "description": "assets/texts/projects/tinusaur.md",
-    "icon": "assets/logos/tinusaur.svg",
-    "stack": [{
-        "tech": "Outsource",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "Python",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "Django",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "WebSockets",
-        "color": "#00CF91"
-      },
-      {
-        "tech": "Angular",
-        "color": "#1771F1"
-      }
-    ],
-    "links": [{
-        "href": "https://tinusaur.com/",
-        "color": "#1772F1",
-        "text": "Website"
-      },
-      {
-        "href": "https://gitlab.com/tinusaur",
-        "color": "#1772F1",
-        "text": "GitLab"
-      },
-      {
-        "href": "https://www.facebook.com/tinusaur/",
-        "color": "#1772F1",
-        "text": "Facebook"
-      },
-      {
-        "href": "https://www.instagram.com/tinusaur/",
-        "color": "#1772F1",
-        "text": "Instagram"
-      }
-    ]
-  },
-  {
     "title": "T5MTOKYFOtFv",
     "subTitle": "@brainhub outsource",
     "slug": "T5MTOKYFOtFv",
@@ -403,6 +402,28 @@
       },
       {
         "tech": "Prototyping",
+        "color": "#1771F1"
+      }
+    ]
+  },
+  {
+    "title": "m(m*&apsYUI",
+    "subTitle": "@brainhub outsource",
+    "slug": "mmapsproject",
+    "role": "Front-end map dev",
+    "image": "assets/patterns/radiant.svg",
+    "description": "assets/texts/projects/mmapsproject.md",
+    "links": [],
+    "stack": [{
+        "tech": "Outsource",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Angular",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Mapbox",
         "color": "#1771F1"
       }
     ]
@@ -466,7 +487,7 @@
     "title": "More on Github",
     "slug": "https://github.com/timadevelop",
     "role": "",
-    "image": "assets/patterns/squares.svg",
+    "image": "assets/github.png",
     "description": ""
   }
 ]

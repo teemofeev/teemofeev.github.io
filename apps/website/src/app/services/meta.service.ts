@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class MetaService {
     this.meta.updateTag({property: 'og:type', content: 'website'});
     this.meta.updateTag({property: 'og:locale', content: 'en_US'});
     this.meta.addTag({ name: 'twitter:site', content: '@teemofeev' });
+    this.setDefaultImage();
   }
 
   setTitle(title: string) {
@@ -38,5 +40,9 @@ export class MetaService {
     this.meta.updateTag({ property: 'og:image', content: imageUrl, itemprop: 'image' });
     this.meta.updateTag({ property: 'og:image:url', content: imageUrl, itemprop: 'image' });
     this.meta.updateTag({ property: 'og:image:type', content: imageType || 'image/png' });
+  }
+
+  setDefaultImage() {
+    this.setImage(`${environment.siteUrl}/assets/main.jpg`);
   }
 }

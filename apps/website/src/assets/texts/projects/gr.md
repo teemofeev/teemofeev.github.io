@@ -15,3 +15,9 @@ We've wrote our first visualization in 2017 and won 2nd prize on [#BG10xEU hacka
 You can see GR's growth on [facebook.com/brainhublab](https://www.facebook.com/brainhublab)
 
 *Time invested: > 2 years.*
+
+---
+<iframe style="display: block; margin: auto; min-width: 50%; max-width: 100%; min-height: 270px;" src="https://www.youtube.com/embed/9pVpbj61zfQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+![Old devices](/assets/gr/iot.jpg)
+![Vis](/assets/gr/unity.jpg)

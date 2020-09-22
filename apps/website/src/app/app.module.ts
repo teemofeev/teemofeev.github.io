@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {
@@ -60,7 +60,7 @@ registerLocaleData(en);
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot({ loader: HttpClient, sanitize: SecurityContext.NONE }),
     FormsModule,
     HttpClientModule,
     NzResultModule,
