@@ -1,7 +1,8 @@
 [{
     "title": "Brainhub",
     "slug": "brainhub",
-    "role": "Co-founder, software engineer",
+    "details": "2016-2020",
+    "role": "Co-founder, Software engineer",
     "image": "assets/patterns/mountains.svg",
     "description": "assets/texts/projects/brainhub.md",
     "icon": "assets/logos/brainhub.svg",
@@ -33,6 +34,35 @@
         "href": "https://medium.com/@brainhublab",
         "color": "#1772F1",
         "text": "Medium"
+      }
+    ]
+  },
+  {
+    "title": "Gameface",
+    "subTitle": "@coherent-labs",
+    "details": "2020-2022",
+    "slug": "gameface",
+    "role": "C++ Software engineer",
+    "image": "assets/cl/coh.png",
+    "description": "assets/texts/projects/gf.md",
+    "stack": [
+      {
+        "tech": "C/C++",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Web Standards",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "JS / HTML / CSS",
+        "color": "#1771F1"
+      }
+    ],
+    "links": [{
+        "href": "https://coherent-labs.com/products/coherent-gameface/",
+        "color": "#1772F1",
+        "text": "Gameface official website"
       }
     ]
   },
@@ -132,54 +162,23 @@
     "links": []
   },
   {
-    "title": "Servicescope",
-    "subTitle": "@brainhub",
-    "slug": "servicescope",
-    "role": "Full Stack Engineer",
-    "image": "assets/servicescope/filtering.jpg",
-    "description": "assets/texts/projects/servicescope.md",
-    "links": [{
-        "href": "https://www.facebook.com/servicescope",
-        "color": "#1772F1",
-        "text": "Facebook"
-      },
-      {
-        "href": "https://github.com/timadevelop/saasWebClient",
-        "text": "Git"
-      }
-    ],
-    "stack": [{
-        "tech": "Angular",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "WebSockets",
-        "color": "#1771F1"
-      },
-      {
-        "tech": "Django",
-        "color": "#00CF91"
-      },
-      {
-        "tech": "APIs",
-        "color": "#00CF91"
-      },
-      {
-        "tech": "Payments",
-        "color": "#00CF91"
-      }
-    ]
-  },
-  {
     "title": "Education43",
-    "subTitle": "@home",
+    "subTitle": "@personal",
     "slug": "https://education43.teemofeev.com/",
-    "role": "",
+    "role": "I'm fond of self-education",
     "image": "assets/patterns/randomized.svg",
     "description": ""
   },
   {
-    "title": "Tinusaur",
+    "title": "SkiPrices.com",
+    "subTitle": "@personal",
+    "slug": "https://skiprices.com/",
+    "role": "Fell in love with skiing in 2021",
+    "image": "assets/skiprices/preview.png",
+    "description": ""
+  },
+  {
+    "title": "Blocktinu",
     "subTitle": "@brainhub x @tinusaur",
     "slug": "tinusaur",
     "role": "Full Stack Engineer",
@@ -255,6 +254,45 @@
       },
       {
         "tech": "Streaming",
+        "color": "#00CF91"
+      }
+    ]
+  },
+  {
+    "title": "Servicescope",
+    "subTitle": "@brainhub",
+    "slug": "servicescope",
+    "role": "Full Stack Engineer",
+    "image": "assets/servicescope/filtering.jpg",
+    "description": "assets/texts/projects/servicescope.md",
+    "links": [{
+        "href": "https://www.facebook.com/servicescope",
+        "color": "#1772F1",
+        "text": "Facebook"
+      },
+      {
+        "href": "https://github.com/timadevelop/saasWebClient",
+        "text": "Git"
+      }
+    ],
+    "stack": [{
+        "tech": "Angular",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "WebSockets",
+        "color": "#1771F1"
+      },
+      {
+        "tech": "Django",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "APIs",
+        "color": "#00CF91"
+      },
+      {
+        "tech": "Payments",
         "color": "#00CF91"
       }
     ]

@@ -11,9 +11,9 @@ I joined Brainhub in Sep-Oct 2016, after my 1st year in Sofia University.
 
 During the last 4 years I have been working on a lot of internal & external projects. We were prototyping a lot of our ideas and were helping other people to implement their ideas into the reality.
 
-My main responsibility was to engineer & implement solutions in the most effective way we can. Due to a lot of differences between ideas & related fields, I was choosing & trying different technologies to suit prototype needs.
+My main responsibility was to engineer & implement solutions in the most effective way we can. Due to a lot of differences between ideas & related fields, I was choosing & trying different technologies to suit prototype needs. We helped many startups to get started with our prototyping and engineering abilities.
 
-Unfortunately, as you can see on our Facebook page, we had to make an extremely difficult decision on Sep 15, 2020:
+GR - a gesture recognition bracelet was our main internal product. Unfortunately, as you can see on our Facebook page, we had to make an extremely difficult decision on Sep 15, 2020:
 > Today we're announcing that BrainHub is closing its doors indefinitely.
 > 
 > Thank you for joining us on this adventure.
