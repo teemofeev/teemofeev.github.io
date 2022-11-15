@@ -10,7 +10,6 @@ const DEFAULT_EMAIL_ME_TEXT = 'Better email me';
   styleUrls: ['./social-links.component.less']
 })
 export class SocialLinksComponent {
-  public readonly phone = '+359878133834';
   private readonly _place = 'Eastern Europe';
   public mailHref = null;
 
@@ -26,10 +25,6 @@ export class SocialLinksComponent {
     }
     this.mailHref = `mailto:${environment.email}`;
     this.showMsg(`Check your email app. Here's my email: ${environment.email}`);
-  }
-
-  showPhone() {
-    this.showMsg(`Here's my phone: ${this.phone}`);
   }
 
   showPlace() {

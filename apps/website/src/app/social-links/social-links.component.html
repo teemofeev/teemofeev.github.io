@@ -18,6 +18,12 @@
       twitter
     </nz-tag>
   </a>
+  <a target="_blank" href="https://instagram.com/teemofeev">
+    <nz-tag nzColor="#833AB4">
+      <i nz-icon nzType="instagram" nzTheme="fill"></i>
+      insta
+    </nz-tag>
+  </a>
   <a target="_blank" href="https://linkedin.com/in/teemofeev">
     <nz-tag nzColor="#0077b5">
       <i nz-icon nzType="linkedin" nzTheme="fill"></i>
@@ -38,11 +44,8 @@
   </a>
 </div>
 <div class="btns">
-  <a [href]="'tel:' + phone">
-    <button nz-button nzSize="large" (click)="showPhone()">Call me</button>
-  </a>
-  <button nz-button nzSize="large" (click)="showPlace()">Meet me</button>
   <a [href]="mailHref" (click)="emailClick($event)">
-    <button nz-button nzSize="large">Better email me</button>
+    <button nz-button nzSize="large">Email me</button>
   </a>
+  <!-- <button nz-button nzSize="large" (click)="showPlace()">Meet me</button> -->
 </div>
