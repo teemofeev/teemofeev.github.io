@@ -67,6 +67,9 @@
     * {
       vertical-align: middle;
     }
+    @media (max-width: @screen-md) {
+      padding-right: 10px;
+    }
 
     [nz-menu-item] {
       // font-size: @heading-1-size / ;
@@ -79,10 +82,12 @@
       }
 
       @media (max-width: @screen-md) {
-        display: none;
-        &.always-visible {
-          display: initial;
-        }
+        margin: 0;
+        padding: 0 10px;
+        // display: none;
+        // &.always-visible {
+        //   display: initial;
+        // }
       }
     }
   }

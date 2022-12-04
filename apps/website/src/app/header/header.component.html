@@ -6,7 +6,7 @@
           <a [routerLink]="['/']">
             <h1>
               <img class="logo" src="assets/logos/vlad.svg" alt="This logo was made by my brother">
-              <b>Vlad Timofeev.</b></h1>
+            </h1>
           </a>
         </li>
       </ul>
@@ -22,16 +22,16 @@
         <li nz-menu-item nzMatchRouter>
           <a [routerLink]="['/', 'trips']">Trips</a>
         </li>
-        <li nz-menu-item class="always-visible" (click)="openNavigation()">
+        <!-- <li nz-menu-item class="always-visible">
           <a class="menuButton">
             <i
               nz-icon
               nzType="teemofeev:menu"
               #loadingElement
-              [class.rotated]="navigationVisible"
+              [class.rotated]=""
             ></i>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -39,46 +39,45 @@
 <nz-drawer
   nzWrapClassName="navigation"
   nzClosable
-  [nzVisible]="navigationVisible"
+  [nzVisible]="false"
   nzPlacement="right"
-  (nzOnClose)="closeNavigation()"
   [nzBodyStyle]="{ padding: 0, paddingTop: '40px' }"
 >
   <ul nz-menu nzMode="inline" class="drawer-menu">
-    <li nz-menu-item [nzSelected]="isRoot" (click)="closeNavigation()">
+    <li nz-menu-item [nzSelected]="isRoot">
       <a [routerLink]="['/']"><i nz-icon nzType="home"></i>Home</a>
     </li>
-    <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+    <li nz-menu-item nzMatchRouter>
       <a [routerLink]="['/', 'projects']"
         ><i nz-icon nzType="fire"></i>Projects</a
       >
     </li>
-    <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+    <li nz-menu-item nzMatchRouter>
       <a [routerLink]="['/', 'story']"
         ><i nz-icon nzType="align-left"></i>Story</a
       >
     </li>
-    <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+    <li nz-menu-item nzMatchRouter>
       <a [routerLink]="['/', 'trips']"><i nz-icon nzType="global"></i>Trips</a>
     </li>
     <li nz-menu-group nzTitle="Social">
       <ul>
-        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+        <li nz-menu-item nzMatchRouter>
           <a target="_blank" href="https://twitter.com/teemofeev"
             ><i nz-icon nzType="export"></i>Twitter</a
           >
         </li>
-        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+        <li nz-menu-item nzMatchRouter>
           <a target="_blank" href="https://facebook.com/teemofeev"
             ><i nz-icon nzType="export"></i>Facebook</a
           >
         </li>
-        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+        <li nz-menu-item nzMatchRouter>
           <a target="_blank" href="https://github.com/timadevelop"
             ><i nz-icon nzType="export"></i>Github</a
           >
         </li>
-        <li nz-menu-item nzMatchRouter (click)="closeNavigation()">
+        <li nz-menu-item nzMatchRouter>
           <a target="_blank" href="https://linkedin.com/in/teemofeev"
             ><i nz-icon nzType="export"></i>Linkedin</a
           >

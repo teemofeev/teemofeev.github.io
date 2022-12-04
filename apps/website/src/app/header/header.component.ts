@@ -8,7 +8,6 @@ import { filter, debounceTime } from 'rxjs/operators';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-  navigationVisible: Boolean = false;
   isRoot: Boolean = false;
 
   // Instead of holding a boolean value for whether the spinner
@@ -73,16 +72,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe(e => this.isRoot = this.router.isActive('/', true));
-  }
-
-
-  public closeNavigation() {
-    this.navigationVisible = false;
-  }
-
-  public openNavigation() {
-    this.navigationVisible = true;
+      .subscribe(e => {
+        this.isRoot = this.router.isActive('/', true);
+      });
   }
 
 }
