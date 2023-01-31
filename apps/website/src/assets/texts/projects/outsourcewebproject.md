@@ -15,7 +15,7 @@ class SomePage(someParent):
   article_2_description = TextField
   article_2_image = ImageField
   article_3_title = TextField
-  # ! NOTE ! This code is BAD
+  # ! NOTE ! Reminder to myself:
   # if you ever see code like this
   # ask owners to fix it, do your job.
   # And if nothing happens after months

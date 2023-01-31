@@ -1,4 +1,33 @@
 [{
+    "title": "Gameface",
+    "subTitle": "@coherent-labs",
+    "details": "2020-2022",
+    "slug": "gameface",
+    "role": "C++ Software engineer",
+    "image": "assets/cl/coh.png",
+    "description": "assets/texts/projects/gf.md",
+    "stack": [
+      {
+        "tech": "C/C++",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "Web Standards",
+        "color": "#FE9E76"
+      },
+      {
+        "tech": "JS / HTML / CSS",
+        "color": "#1771F1"
+      }
+    ],
+    "links": [{
+        "href": "https://coherent-labs.com/products/coherent-gameface/",
+        "color": "#1772F1",
+        "text": "Gameface official website"
+      }
+    ]
+  },
+  {
     "title": "Brainhub",
     "slug": "brainhub",
     "details": "2016-2020",
@@ -34,35 +63,6 @@
         "href": "https://medium.com/@brainhublab",
         "color": "#1772F1",
         "text": "Medium"
-      }
-    ]
-  },
-  {
-    "title": "Gameface",
-    "subTitle": "@coherent-labs",
-    "details": "2020-2022",
-    "slug": "gameface",
-    "role": "C++ Software engineer",
-    "image": "assets/cl/coh.png",
-    "description": "assets/texts/projects/gf.md",
-    "stack": [
-      {
-        "tech": "C/C++",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "Web Standards",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "JS / HTML / CSS",
-        "color": "#1771F1"
-      }
-    ],
-    "links": [{
-        "href": "https://coherent-labs.com/products/coherent-gameface/",
-        "color": "#1772F1",
-        "text": "Gameface official website"
       }
     ]
   },
@@ -499,27 +499,6 @@
       }
     ],
     "links": []
-  },
-  {
-    "title": "Elixir file content search lib",
-    "slug": "fcs",
-    "role": "Student",
-    "image": "assets/patterns/elixir.svg",
-    "description": "assets/texts/projects/fcs.md",
-    "links": [{
-      "href": "https://github.com/timadevelop/fcs",
-      "color": "#1772F1",
-      "text": "Github"
-    }],
-    "stack": [{
-        "tech": "Elixir",
-        "color": "#FE9E76"
-      },
-      {
-        "tech": "Functional Programming",
-        "color": "#1771F1"
-      }
-    ]
   },
   {
     "title": "More on Github",
